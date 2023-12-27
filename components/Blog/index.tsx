@@ -6,12 +6,12 @@ const Blog = () => {
   return (
     <section
       id="blog"
-      className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
+      className="bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Our Latest Projects"
+          paragraph="Discover PrimeReserved's excellence in our project showcase. Each thumbnail encapsulates a transformative success story. Click to explore how we empower businesses to thrive in the digital landscape."
           center
         />
 

@@ -3,17 +3,17 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Author Energy Limited",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-01.jpg",
+      "Experience the digital evolution of Author Energy Ltd. Our showcase reveals a fusion of sleek design, advanced functionality, and bespoke training, propelling their online presence to new heights. PrimeReserved—where energy meets excellence.",
+    image: "/images/blog/project-01.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
+      name: "PrimeReserved",
+      image: "/images/blog/author.jpg",
+      designation: "Web Development",
     },
-    tags: ["creative"],
-    publishDate: "2025",
+    tags: ["Oil & Gas Industry"],
+    publishDate: "2023",
   },
   {
     id: 2,

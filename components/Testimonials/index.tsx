@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Mr. Liberty Amaechi",
+    designation: "Founder at Author Energy Ltd",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "PrimeReserved's innovative solutions transformed our online presence. The collaboration was a true partnership, delivering outstanding results. Highly recommend their expertise!",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "David Wills",
+    designation: "Software Developer and Industry Leader",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Working with PrimeReserved is a revelation. Their approach to web development is nothing short of brilliant. It's not just about projects; it's about a shared passion for innovation and precision. Proud to be associated with a team that consistently exceeds expectations.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Favour",
+    designation: "DevOps Engineer",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Being friends with the exceptional team at PrimeReserved has been nothing short of inspiring. Their commitment to excellence is truly remarkable. Witnessing firsthand the level of innovation and dedication they bring to every project is awe-inspiring. Proud to know a company that consistently raises the bar in the industry.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -34,11 +34,11 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Endorsements from Industry Leaders and Satisfied Clients"
+          paragraph="Uncover insights from industry leaders and hear the success stories of our satisfied clients. Explore testimonials that highlight the impact of PrimeReserved's innovative solutions. PrimeReserved: Trusted by Industry Leaders, Valued by Our Clients."
           center
         />
 

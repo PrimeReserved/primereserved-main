@@ -3,10 +3,10 @@ import { Brand } from "@/types/brand";
 const brandsData: Brand[] = [
   {
     id: 1,
-    name: "UIdeck",
-    href: "https://uideck.com",
-    image: "/images/brands/uideck.svg",
-    imageLight: "/images/brands/uideck-light.svg",
+    name: "Author Energy Ltd",
+    href: "#",
+    image: "/images/brands/authorenergy.png",
+    imageLight: "/images/brands/authorenergy.png",
   },
   {
     id: 2,
