@@ -17,31 +17,31 @@ const blogData: Blog[] = [
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "NoxylPrime Global Limited",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-02.jpg",
+      "At NoxylPrime Global Ltd, we've crafted and currently manage their website. This showcase captures the essence of our collaborative work, embodying the seamless integration of innovation and precision in every digital solution delivered.",
+    image: "/images/blog/project-02.jpg",
     author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      name: "PrimeReserved",
+      image: "/images/blog/author.jpg",
+      designation: "Web Development",
     },
-    tags: ["computer"],
-    publishDate: "2025",
+    tags: ["Oil & Gas Industry"],
+    publishDate: "2023",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Dignity & Respect",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-03.jpg",
+      "At Dignity and Respect, our partnership extends beyond building a website — we've cultivated a digital presence that resonates with their values. Managing their online platform is a testament to our commitment, where every pixel reflects the harmonious blend of creativity and technical expertise.",
+    image: "/images/blog/project-03.jpg",
     author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "PrimeReserved",
+      image: "/images/blog/author.jpg",
+      designation: "Web Development",
     },
-    tags: ["design"],
-    publishDate: "2025",
+    tags: ["Health Care Industry"],
+    publishDate: "2023",
   },
 ];
 export default blogData;
