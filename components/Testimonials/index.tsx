@@ -5,7 +5,7 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Mr. Liberty Amaechi",
+    name: "Liberty",
     designation: "Founder at Author Energy Ltd",
     content:
       "PrimeReserved's innovative solutions transformed our online presence. The collaboration was a true partnership, delivering outstanding results. Highly recommend their expertise!",
@@ -14,7 +14,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "David Wills",
+    name: "David",
     designation: "Software Developer and Industry Leader",
     content:
       "Working with PrimeReserved is a revelation. Their approach to web development is nothing short of brilliant. It's not just about projects; it's about a shared passion for innovation and precision. Proud to be associated with a team that consistently exceeds expectations.",
@@ -23,7 +23,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Favour",
+    name: "John",
     designation: "DevOps Engineer",
     content:
       "Being friends with the exceptional team at PrimeReserved has been nothing short of inspiring. Their commitment to excellence is truly remarkable. Witnessing firsthand the level of innovation and dedication they bring to every project is awe-inspiring. Proud to know a company that consistently raises the bar in the industry.",

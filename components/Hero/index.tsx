@@ -31,10 +31,10 @@ const Hero = () => {
                     Schedule A Call For Free
                   </Link>
                   <Link
-                    href="https://www.youtube.com/watch?v=P4eLCRqJ97s"
+                    href="/blog"
                     className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    Watch Video
+                    Our Projects
                   </Link>
                 </div>
               </div>
