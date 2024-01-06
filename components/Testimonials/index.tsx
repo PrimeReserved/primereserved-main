@@ -9,7 +9,7 @@ const testimonialData: Testimonial[] = [
     designation: "Software Engineer at SwiftPay",
     content:
       "Working with PrimeReserved was a game-changer for our business. Their team of skilled developers demonstrated exceptional professionalism, a keen understanding of our needs, and a commitment to delivering top-notch solutions. The communication was seamless, and the final product exceeded our expectations. Primereserved is our go-to choice for reliable and innovative software development.",
-    image: "/images/testimonials/david.jpg",
+    image: "/images/testimonials/david.JPG",
     star: 5,
   },
   {
