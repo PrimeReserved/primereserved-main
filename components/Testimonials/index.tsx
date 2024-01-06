@@ -14,8 +14,8 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Liberty",
-    designation: "Founder at AEL",
+    name: "Noah",
+    designation: "Software Engineer at Google",
     content:
       "PrimeReserved's innovative solutions transformed our online presence. The collaboration was a true partnership, delivering outstanding results. Highly recommend their expertise!",
     image: "/images/testimonials/auth-01.png",
