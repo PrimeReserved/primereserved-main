@@ -11,7 +11,7 @@ const Blog = () => {
       <div className="container">
         <SectionTitle
           title="Our Latest Projects"
-          paragraph="Discover PrimeReserved's excellence in our project showcase. Each thumbnail encapsulates a transformative success story. Click to explore how we empower businesses to thrive in the digital landscape."
+          paragraph="Discover PrimeReserved's excellence in our project showcase. Each thumbnail encapsulates a transformative success story."
           center
         />
 

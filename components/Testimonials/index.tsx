@@ -5,6 +5,15 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
+    name: "David Wills",
+    designation: "Software Engineer at SwiftPay",
+    content:
+      "Working with PrimeReserved was a game-changer for our business. Their team of skilled developers demonstrated exceptional professionalism, a keen understanding of our needs, and a commitment to delivering top-notch solutions. The communication was seamless, and the final product exceeded our expectations. Primereserved is our go-to choice for reliable and innovative software development.",
+    image: "/images/testimonials/david.jpg",
+    star: 5,
+  },
+  {
+    id: 2,
     name: "Liberty",
     designation: "Founder at Author Energy Ltd",
     content:
@@ -12,15 +21,7 @@ const testimonialData: Testimonial[] = [
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
-  {
-    id: 2,
-    name: "David",
-    designation: "Software Developer and Industry Leader",
-    content:
-      "Working with PrimeReserved is a revelation. Their approach to web development is nothing short of brilliant. It's not just about projects; it's about a shared passion for innovation and precision. Proud to be associated with a team that consistently exceeds expectations.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
+
   {
     id: 3,
     name: "John",

@@ -340,7 +340,6 @@ const BlogDetailsPage = () => {
           </div>
         </div>
       </section> */}
-      <div>our projects</div>
     </>
   );
 };
