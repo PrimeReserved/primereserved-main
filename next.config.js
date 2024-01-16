@@ -2,13 +2,8 @@
 const nextConfig = {
   images: {
     domains: ["localhost"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
+    loader: "default", // Add this line to specify the default loader
+    path: "https://cdn.sanity.io", // Specify the base path for the remote images
   },
 };
 
