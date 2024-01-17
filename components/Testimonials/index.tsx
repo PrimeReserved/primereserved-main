@@ -5,8 +5,8 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "David Wills",
-    designation: "Software Engineer at SwiftPay",
+    name: "Mr David Wills",
+    designation: "Software Engineer | SwiftPay, Benin Republic",
     content:
       "Working with PrimeReserved was a game-changer for our business. Their team of skilled developers demonstrated exceptional professionalism, a keen understanding of our needs, and a commitment to delivering top-notch solutions. The communication was seamless, and the final product exceeded our expectations. Primereserved is our go-to choice for reliable and innovative software development.",
     image: "/images/testimonials/david.JPG",
@@ -14,21 +14,11 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Noah",
-    designation: "Software Engineer at Google",
+    name: "Mr Liberty Amaechi",
+    designation: "Snr Team Lead | Author Energy Ltd, Nigeria",
     content:
-      "PrimeReserved's innovative solutions transformed our online presence. The collaboration was a true partnership, delivering outstanding results. Highly recommend their expertise!",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-
-  {
-    id: 3,
-    name: "John",
-    designation: "DevOps Engineer",
-    content:
-      "Being friends with the exceptional team at PrimeReserved has been nothing short of inspiring. Their commitment to excellence is truly remarkable. Witnessing firsthand the level of innovation and dedication they bring to every project is awe-inspiring. Proud to know a company that consistently raises the bar in the industry.",
-    image: "/images/testimonials/auth-03.png",
+      "I must say that my organization collaboration with PrimeReserved was the best decision we took. Their services are top-notch and inspiring. Our staff capability in discharging there responsibility has improved significantly. I strongly recommend them for all tech related services.",
+    image: "/images/testimonials/liberty.jpeg",
     star: 5,
   },
 ];
