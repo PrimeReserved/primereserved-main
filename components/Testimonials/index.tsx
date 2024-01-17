@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Mr David Wills",
     designation: "Software Engineer | SwiftPay, Benin Republic",
     content:
-      "Working with PrimeReserved was a game-changer for our business. Their team of skilled developers demonstrated exceptional professionalism, a keen understanding of our needs, and a commitment to delivering top-notch solutions. The communication was seamless, and the final product exceeded our expectations. Primereserved is our go-to choice for reliable and innovative software development.",
+      "Working with PrimeReserved was a game-changer for our business. Their team of skilled developers demonstrated exceptional professionalism, a keen understanding of our needs, and a commitment to delivering top-notch solutions. The communication was seamless, and the final product exceeded our expectations. PrimeReserved is our go-to choice for reliable and innovative software development.",
     image: "/images/testimonials/david.JPG",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Mr Liberty Amaechi",
     designation: "Snr Team Lead | Author Energy Ltd, Nigeria",
     content:
-      "I must say that my organization collaboration with PrimeReserved was the best decision we took. Their services are top-notch and inspiring. Our staff capability in discharging there responsibility has improved significantly. I strongly recommend them for all tech related services.",
+      "I must express that our organization's collaboration with PrimeReserved was the best decision we made. Their services are top-notch and truly inspiring. The capabilities of our staff in fulfilling their responsibilities have improved significantly. I highly recommend them for all tech-related services.",
     image: "/images/testimonials/liberty.jpeg",
     star: 5,
   },
