@@ -1,14 +1,16 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
+import React from "react";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
+import Services from "@/components/Services";
 import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import ContactForm from "@/components/Contact/ContactForm.tsx/ContactForm";
 import { Metadata } from "next";
+import FAQs from "@/components/FAQs/FAQs";
+import ClientReviews from "@/components/ClientReviews/ClientReviews";
+import ImageCardOne from "@/components/Cards/ImageCardOne";
+import ImageCardTwo from "@/components/Cards/ImageCardTwo";
+import ImageBanner from "@/components/Common/imageBanner";
+import ImageBannerTwo from "@/components/Common/ImageBannerTwo";
 
 export const metadata: Metadata = {
   title:
@@ -22,14 +24,15 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <Features />
-      <Video />
+      <ImageBanner />
+      <Services />
+      <ImageCardOne />
+      <ClientReviews />
       <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Blog />
-      <Contact />
+      <ImageCardTwo />
+      <ImageBannerTwo />
+      <FAQs />
+      <ContactForm />
     </>
   );
 }

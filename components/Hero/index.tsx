@@ -1,48 +1,53 @@
-import Link from "next/link";
+import React from "react";
+import { BiRocket } from "react-icons/bi";
+import Image from "next/image";
+import IconButton from "../Buttons/IconButton";
+import BtnArrowIcon from "../Buttons/BtnArrowIcon";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
-    <>
-      <section
-        id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
-      >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div
-                className="wow fadeInUp mx-auto max-w-[800px] text-center"
-                data-wow-delay=".2s"
-              >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  We Create Exceptional Websites and Develop Cutting-edge Web
-                  Applications
-                </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  PrimeReserved—Your Ultimate Destination for Outstanding
-                  Website Designs and Seamless Web Application Developments.
-                  Your satisfaction is our prime reserve!
-                </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="https://calendly.com/primereserve/websiteprojectcall"
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                  >
-                    Schedule A Call For Free
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Our Projects
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <section className="container mx-auto my-12 flex flex-col items-center justify-between py-12 md:flex-row">
+      {/* First Column */}
+      <div className="mb-8 flex max-w-md flex-col items-start gap-4 md:mb-0 md:mr-8 lg:max-w-xl">
+        {/* Button */}
+        <button className="mb-4 flex cursor-not-allowed items-center rounded-full bg-gray-100 px-4 py-3 text-sm">
+          Elevate your brand
+          <span className="ml-2 text-primary">
+            <BiRocket />
+          </span>
+        </button>
+        {/* Heading */}
+        <h1
+          className="mb-4 text-3xl font-extrabold md:text-left md:text-5xl xl:text-6xl"
+          style={{ lineHeight: "1.4" }}
+        >
+          Igniting <span className="text-primary underline">Ideas</span> <br />
+          Inspiring <span className="text-primary underline">Innovation</span>
+        </h1>
+        {/* Paragraph */}
+        <p className="mb-6 text-lg leading-relaxed text-customTextColor md:text-left md:text-2xl">
+          PrimeReserved—Your Ultimate Destination for Outstanding Website
+          Designs and Seamless Web Application Developments. Your satisfaction
+          is our prime reserve!
+        </p>
+        {/* Contact Button */}
+        <IconButton
+          text="Contact us"
+          href="https://calendly.com/primereserve/websiteprojectcall"
+          icon={<BtnArrowIcon />}
+        />
+      </div>
+      {/* Second Column */}
+      <div className="flex justify-center md:justify-end">
+        <Image
+          src="/images/homepage-images/creation.svg"
+          alt="Hero Image"
+          width={500}
+          height={300}
+          className="rounded-lg"
+        />
+      </div>
+    </section>
   );
 };
 
