@@ -3,8 +3,7 @@ import { FiPhone, FiMail } from "react-icons/fi";
 
 const ContactForm = () => {
   return (
-    <>
-      <section
+    <section
         className="wow fadeInUp relative z-10 w-full bg-customBg"
         data-wow-delay=".1s"
       >
@@ -154,7 +153,6 @@ const ContactForm = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
