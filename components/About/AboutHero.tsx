@@ -7,9 +7,10 @@ const AboutHero: React.FC = () => {
       style={{ backgroundImage: "url('/images/about/AboutHeroSection.jpg')" }}
     >
       {/* Background Image Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      {/* Text Content */}
-      <h1 className="text-4xl font-bold text-white">About Us</h1>
+      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+        {/* Text Content */}
+        <h1 className="text-4xl font-bold text-white">About Us</h1>
+      </div>
     </div>
   );
 };

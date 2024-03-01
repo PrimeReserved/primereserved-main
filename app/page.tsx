@@ -9,8 +9,8 @@ import FAQs from "@/components/FAQs/FAQs";
 import ClientReviews from "@/components/ClientReviews/ClientReviews";
 import ImageCardOne from "@/components/Cards/ImageCardOne";
 import ImageCardTwo from "@/components/Cards/ImageCardTwo";
-import ImageBanner from "@/components/Common/imageBanner";
 import ImageBannerTwo from "@/components/Common/ImageBannerTwo";
+import ImageBanner from "@/components/Common/ImageBanner";
 
 export const metadata: Metadata = {
   title:
