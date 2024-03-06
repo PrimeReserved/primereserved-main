@@ -11,6 +11,9 @@ module.exports = {
       center: true,
       padding: "1rem",
     },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
 
     screens: {
       xs: "450px",
@@ -38,8 +41,13 @@ module.exports = {
         white: "#FFFFFF",
         black: "#121723",
         dark: "#1D2430",
-        primary: "#4A6CF7",
+        // primary: "#4A6CF7",
+        primary: "#AC04FF",
         yellow: "#FBB040",
+        customPrimary: "#AC04FF",
+        customSecondary: "#0E0014",
+        customTextColor: "#79747E",
+        customBg: "#F9ECFF",
         "body-color": "#788293",
         "body-color-dark": "#959CB1",
         "gray-dark": "#1E232E",
