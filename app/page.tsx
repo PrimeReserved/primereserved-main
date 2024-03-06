@@ -11,6 +11,7 @@ import ImageCardOne from "@/components/Cards/ImageCardOne";
 import ImageCardTwo from "@/components/Cards/ImageCardTwo";
 import ImageBannerTwo from "@/components/Common/ImageBannerTwo";
 import ImageBanner from "@/components/Common/ImageBanner";
+import CookieConsent from "@/components/Utils/CookieConsent";
 
 export const metadata: Metadata = {
   title:
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <CookieConsent />
       <ScrollUp />
       <Hero />
       <ImageBanner />
