@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 interface ImageAndTextReverseProps {
   imageUrl: string;
@@ -13,19 +13,19 @@ const ImageAndTextReverse: React.FC<ImageAndTextReverseProps> = ({
   paragraph,
 }) => {
   return (
-    <div className="flex flex-col items-center md:flex-row md:justify-between md:gap-4 md:py-4">
-      <div className="py-4 md:w-1/2 md:max-w-md md:py-0">
-        <h2 className="mb-2 text-xl font-bold">{header}</h2>
-        <p className="leading-relaxed text-gray-600">{paragraph}</p>
-      </div>
+    <div className="flex flex-col items-center justify-between px-4 py-8 md:flex-row-reverse md:px-8">
       <div className="md:w-1/2">
         <Image
           src={imageUrl}
           alt="Image"
-          width={500}
-          height={500}
           className="rounded-lg"
+          width={500}
+          height={400}
         />
+      </div>
+      <div className="pr-8 md:w-1/2 md:max-w-md md:pr-12">
+        <h2 className="mb-4 text-2xl font-bold">{header}</h2>
+        <p className="text-gray-600">{paragraph}</p>
       </div>
     </div>
   );
