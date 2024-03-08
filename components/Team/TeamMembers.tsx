@@ -187,6 +187,7 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           width: 60%;
           background-color: white;
           display: flex;

@@ -23,7 +23,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
           height={400}
         />
       </div>
-      <div className="pl-0 md:w-1/2 md:max-w-md md:pl-8">
+      <div className="pl-0 md:w-1/2 md:max-w-md md:pl-8 pt-4 md:pt-0">
         <h2 className="mb-4 text-2xl font-bold">{header}</h2>
         <p className="text-gray-600">{paragraph}</p>
       </div>

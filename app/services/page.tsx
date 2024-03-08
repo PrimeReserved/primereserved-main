@@ -62,7 +62,7 @@ const ServicesPage = () => {
   return (
     <>
       <div className="relative z-10 overflow-hidden pt-20 lg:pt-[90px]"></div>
-      <ServicesHero backgroundImage="/images/services-images/herodesktop.png" />
+      <ServicesHero />
       <section className="lg:px-20">
         <ImageTextButton
           imageSrc="/images/services-images/aboutOurServices.png"
@@ -147,9 +147,9 @@ growth and enhancing customer engagement."
           />
           <CenteredHeading text="Our Design Flow" />
           <DesignFlow boxesData={boxesData} />
-          <ContactForm />
         </div>
       </section>
+      <ContactForm />
     </>
   );
 };

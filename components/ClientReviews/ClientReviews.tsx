@@ -9,7 +9,7 @@ const ClientReviews: React.FC = () => {
     {
       quote:
         "Working with PrimeReserved was a game changer for our business. Their team of skilled developers demonstrated exceptional professionalism, a keen understanding of our needs, and a commitment to delivering top-notch solutions. The communication was seamless, and the final product exceeded our expectations. PrimeReserved is our go-to choice for reliable and innovative software development.",
-      image: "/images/testimonial1.jpg",
+      image: "/images/testimonials/david.JPG",
       name: "Mr David Wills",
       position: "Software Engineer | SwiftPay",
       location: "Benin Republic",
@@ -17,7 +17,7 @@ const ClientReviews: React.FC = () => {
     {
       quote:
         "We've had a fantastic experience working with PrimeReserved. Their attention to detail, commitment to quality, and prompt communication made the entire development process smooth and efficient. We highly recommend their services to anyone looking for top-notch software solutions.",
-      image: "/images/testimonial2.jpg",
+      image: "/images/testimonials/liberty.jpeg",
       name: "Ms Sarah Johnson",
       position: "Product Manager | TechWise",
       location: "United States",
@@ -25,7 +25,7 @@ const ClientReviews: React.FC = () => {
     {
       quote:
         "PrimeReserved exceeded our expectations with their exceptional software development services. From concept to delivery, their team demonstrated expertise, creativity, and professionalism. They truly understand our business needs and deliver innovative solutions that drive results.",
-      image: "/images/testimonial3.jpg",
+      image: "/images/testimonials/david.JPG",
       name: "Mr Michael Brown",
       position: "CEO | DigitalSolutions",
       location: "Canada",
@@ -33,7 +33,7 @@ const ClientReviews: React.FC = () => {
     {
       quote:
         "Working with PrimeReserved was a delightful experience. Their team is highly skilled, dedicated, and customer-oriented. They not only delivered a high-quality software solution but also provided valuable insights and recommendations throughout the process. We look forward to collaborating with them on future projects.",
-      image: "/images/testimonial4.jpg",
+      image: "/images/testimonials/liberty.jpeg",
       name: "Ms Emily White",
       position: "CTO | CodeCrafters",
       location: "Australia",
@@ -41,12 +41,11 @@ const ClientReviews: React.FC = () => {
     {
       quote:
         "PrimeReserved delivered exactly what we needed and more. Their professionalism, expertise, and commitment to customer satisfaction are commendable. We are extremely satisfied with the outcome of our project and would gladly recommend their services to others.",
-      image: "/images/testimonial5.jpg",
+      image: "/images/testimonials/david.JPG",
       name: "Mr John Smith",
       position: "Head of IT | TechHub",
       location: "United Kingdom",
     },
-    // Add more testimonials here
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,7 +63,7 @@ const ClientReviews: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-white py-12">
+    <section className="w-full py-12">
       <div className="container mx-auto">
         <div className="mb-8 text-left">
           <p className="text-lg font-bold text-primary">CLIENT REVIEWS</p>
@@ -73,14 +72,20 @@ const ClientReviews: React.FC = () => {
           </h2>
         </div>
         <div className="relative overflow-hidden">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center space-x-4">
             <button
               className="absolute left-0 top-1/2 -translate-y-1/2 transform focus:outline-none"
               onClick={handlePrev}
             >
               <FiChevronLeft className="text-4xl text-primary" />
             </button>
-            <TestimonialBox {...testimonials[currentIndex]} />
+            {testimonials.map((testimonial, index) => (
+              <TestimonialBox
+                key={index}
+                {...testimonial}
+                hideOverflow={index === currentIndex + 2}
+              />
+            ))}
             <button
               className="absolute right-0 top-1/2 -translate-y-1/2 transform focus:outline-none"
               onClick={handleNext}
@@ -102,27 +107,36 @@ interface Testimonial {
   location: string;
 }
 
-const TestimonialBox: React.FC<Testimonial> = ({
+interface TestimonialBoxProps extends Testimonial {
+  hideOverflow?: boolean;
+}
+
+const TestimonialBox: React.FC<TestimonialBoxProps> = ({
   quote,
   image,
   name,
   position,
   location,
+  hideOverflow = false,
 }) => {
   return (
-    <div className="mx-auto w-full max-w-lg flex-col items-start space-x-4 rounded-lg border border-gray-200 p-6">
-      <FaQuoteLeft className="text-4xl text-primary" />
-      <p className="flex-1 text-lg text-gray-800">{quote}</p>
-      <div className="flex items-center">
+    <div
+      className={`w-full max-w-lg flex-shrink-0 items-start space-x-2 rounded-lg border border-gray-200 p-2 ${
+        hideOverflow ? "overflow-hidden" : ""
+      }`}
+    >
+      <FaQuoteLeft className="my-8 ml-3 text-3xl text-gray-600" />
+      <p className="mb-8 text-sm text-black">{quote}</p>
+      <div className="flex items-center gap-4">
         <Image
           src={image}
           alt="Client Image"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           className="rounded-full"
         />
-        <div className="flex flex-col items-center">
-          <p className="text-lg font-bold">{name}</p>
+        <div className="flex flex-col">
+          <p className="text-sm font-bold">{name}</p>
           <p className="text-sm text-gray-600">{position}</p>
           <p className="text-sm text-gray-600">{location}</p>
         </div>

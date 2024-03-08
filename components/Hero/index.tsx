@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         </button>
         {/* Heading */}
         <h1
-          className="mb-4 text-3xl font-extrabold md:text-left md:text-5xl xl:text-6xl"
+          className="mb-4 text-3xl font-extrabold md:text-left md:text-4xl xl:text-5xl"
           style={{ lineHeight: "1.4" }}
         >
           Igniting <span className="text-primary underline">Ideas</span> <br />
