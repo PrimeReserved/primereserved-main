@@ -1,6 +1,5 @@
 import React from "react";
 import IconButton from "../Buttons/IconButton";
-import BtnArrowIcon from "../Buttons/BtnArrowIcon";
 import Image from "next/image";
 
 interface ImageTextButtonProps {
@@ -19,11 +18,7 @@ const ImageTextButton: React.FC<ImageTextButtonProps> = ({
       </div>
       <div className="flex flex-col justify-center md:w-1/2 md:pl-8">
         <p className="mb-6 text-lg">{paragraph}</p>
-        <IconButton
-          text="Speak with an expert"
-          href="https://calendly.com/primereserve/websiteprojectcall"
-          icon={<BtnArrowIcon />}
-        />
+        <IconButton text="Speak with an expert" icon={false} />
       </div>
     </div>
   );

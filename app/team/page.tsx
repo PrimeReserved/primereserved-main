@@ -1,6 +1,6 @@
 "use client";
 import ImageAndText from "@/components/Cards/ImageAndText";
-import ContactForm from "@/components/Contact/ContactForm.tsx/ContactForm";
+import ContactForm from "@/components/Contact/ContactForm/ContactForm";
 import TeamHero from "@/components/Team/TeamHero";
 import TeamMembers from "@/components/Team/TeamMembers";
 // import { Metadata } from "next";
@@ -142,10 +142,8 @@ const TeamPage = () => {
       />
       <ImageAndText
         imageUrl="/images/team-images/endSectionIllustration.svg"
-        header="Together We Shape the 
-            Future of Technology"
-        paragraph="Reach out to us today and be a part of our journey 
-            toward a brighter tomorrow."
+        header="Together We Shape the Future of Technology"
+        paragraph="Reach out to us today and be a part of our journey toward a brighter tomorrow."
       />
       <ContactForm />
     </>

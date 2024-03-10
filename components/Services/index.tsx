@@ -3,11 +3,11 @@ import { FiCode } from "react-icons/fi";
 
 const Services: React.FC = () => {
   return (
-    <section className="w-full bg-gray-100 py-12">
+    <section className="w-full py-12">
       <div className="container mx-auto">
-        <div className="mb-8 text-center">
-          <p className="text-lg font-bold text-primary">OUR SERVICES</p>
-          <h2 className="text-3xl font-bold">
+        <div className="mb-16 text-center">
+          <p className="py-2 text-lg font-bold text-primary">OUR SERVICES</p>
+          <h2 className="py-2 text-3xl font-bold">
             We Are Specialized In The Following
           </h2>
         </div>
@@ -34,7 +34,7 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-lg p-6 shadow-lg ${
+      className={`rounded-lg border-2 border-gray-100 p-6 shadow-lg ${
         isFirst ? "bg-primary text-white" : "bg-white text-black"
       }`}
     >

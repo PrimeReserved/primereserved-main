@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="wow fadeInUp relative z-10 bg-customSecondary pt-16 text-white dark:bg-gray-dark md:pt-20 lg:pt-24"
+        className="wow fadeInUp relative z-10 bg-customSecondary pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24"
         data-wow-delay=".1s"
       >
         <div className="container">
@@ -37,11 +37,7 @@ const Footer = () => {
                   for businesses of all sizes, from startups to enterprises.
                 </p>
 
-                <IconButton
-                  text="Contact us"
-                  href="https://calendly.com/primereserve/websiteprojectcall"
-                  icon={<BtnArrowIcon />}
-                />
+                <IconButton text="Contact us" icon={<BtnArrowIcon />} />
 
                 <div className="mt-8 items-center xs:hidden md:flex">
                   <a className="mr-6 text-2xl text-white">Follow Us</a>

@@ -14,14 +14,17 @@ const QuestionComponent: React.FC<QuestionProps> = ({
   onClick,
 }) => {
   return (
-    <div className="mb-6 py-4">
+    <div className="mb-6 w-full py-4">
       <div className="flex cursor-pointer items-center justify-between">
-        <p className="font-semibold xs:text-lg md:text-2xl">{question}</p>
+        <p className="font-semibold xs:text-lg md:text-xl">{question}</p>
         <button onClick={onClick}>
           {isOpen ? (
-            <FiChevronUp size={24} className="rounded-full bg-primary p-1" />
+            <FiChevronUp
+              size={30}
+              className="rounded-full bg-primary p-1 text-white"
+            />
           ) : (
-            <FiChevronDown size={24} className="rounded-full bg-gray-200 p-1" />
+            <FiChevronDown size={30} className="rounded-full bg-gray-200 p-1" />
           )}
         </button>
       </div>

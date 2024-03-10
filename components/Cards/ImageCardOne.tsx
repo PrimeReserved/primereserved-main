@@ -20,42 +20,40 @@ const ImageCardOne = () => {
         </div>
         {/* Column 2: Content */}
         <div className="flex flex-col items-start md:w-1/2 lg:ml-8">
-          <p className="mb-2 font-bold text-primary">EXPERTS IN THE FIELD</p>
-          <h2 className="mb-4 text-3xl font-bold lg:text-4xl">
+          <p className="mb-2 text-xl font-bold text-primary md:text-lg">
+            EXPERTS IN THE FIELD
+          </p>
+          <h2 className="mb-4 text-lg font-bold lg:text-3xl">
             Empowering Your Online Presence
           </h2>
-          <p className="text-md mb-6 text-customTextColor md:text-lg">
+          <p className="text-md my-4 text-customTextColor md:text-lg">
             At PrimeReserved, we are dedicated to transforming your digital
             landscape. Our expertise goes beyond conventional boundaries,
             delivering innovative solutions that drive growth and success.
           </p>
-          <ul className="mb-6">
-            <li className="mb-2 flex items-center text-lg font-bold">
+          <ul className="my-4">
+            <li className="mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Professional Designs
             </li>
-            <li className="mb-2 flex items-center text-lg font-bold">
+            <li className="mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Proven Expertise
             </li>
-            <li className="mb-2 flex items-center text-lg font-bold">
+            <li className="mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Cutting Edge Development
             </li>
-            <li className="mb-2 flex items-center text-lg font-bold">
+            <li className="mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               User centric Approach
             </li>
-            <li className="mb-2 flex items-center text-lg font-bold">
+            <li className="mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Timely Delivery
             </li>
           </ul>
-          <IconButton
-            text="Learn More"
-            href="https://calendly.com/primereserve/websiteprojectcall"
-            icon={<BtnArrowIcon />}
-          />
+          <IconButton text="Learn More" icon={<BtnArrowIcon />} />
         </div>
       </div>
     </section>

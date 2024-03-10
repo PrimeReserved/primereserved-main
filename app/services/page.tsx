@@ -1,9 +1,12 @@
+import CallScheduler from "@/components/Cards/CallScheduler";
 import CenteredHeading from "@/components/Cards/CenteredHeadingProps";
 import DesignFlow from "@/components/Cards/DesignFlow";
 import ImageAndText from "@/components/Cards/ImageAndText";
 import ImageAndTextReverse from "@/components/Cards/ImageAndTextReverse";
 import ImageTextButton from "@/components/Cards/ImageTextButton";
-import ContactForm from "@/components/Contact/ContactForm.tsx/ContactForm";
+import WhyPrimeReserved from "@/components/Cards/WhyPrimeReserved";
+import ContactForm from "@/components/Contact/ContactForm/ContactForm";
+import FAQFullScreen from "@/components/FAQs/FAQFullScreen";
 import ServicesHero from "@/components/Services/ServicesHero";
 import { Metadata } from "next";
 
@@ -149,6 +152,10 @@ growth and enhancing customer engagement."
           <DesignFlow boxesData={boxesData} />
         </div>
       </section>
+      <CallScheduler />
+      <CenteredHeading text="Why PrimeReserved" />
+      <WhyPrimeReserved />
+      <FAQFullScreen />
       <ContactForm />
     </>
   );

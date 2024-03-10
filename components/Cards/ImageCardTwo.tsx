@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FiCheck } from "react-icons/fi";
 import BtnArrowIcon from "../Buttons/BtnArrowIcon";
 import IconButton from "../Buttons/IconButton";
+import IconButtonHref from "../Buttons/IconButtonHref";
 
 const ImageCardTwo = () => {
   return (
@@ -23,21 +24,21 @@ const ImageCardTwo = () => {
           <h2 className="mb-4 text-3xl font-bold lg:text-4xl">
             Revolutionizing Online Infrastructure
           </h2>
-          <p className="mb-6 text-lg text-customTextColor">
+          <p className="mb-6 text-md md:text-lg text-customTextColor">
             Embark on a technological voyage with PrimeReserved as we
             revolutionize web development landscapes. Our expertise lies in
             architecting robust online experiences, meticulously designed for
             the dynamic demands of industry leaders.
           </p>
-          <p className="mb-6 text-lg text-customTextColor">
+          <p className="mb-6 text-md md:text-lg text-customTextColor">
             Our proficiency extends into the intricacies of large scale web
             projects, seamlessly merging innovation and precision to craft
             experiences as dynamic as the tech giants we serve.
           </p>
-          <IconButton
+          <IconButtonHref
             text="More About Us"
-            href="https://calendly.com/primereserve/websiteprojectcall"
             icon={<BtnArrowIcon />}
+            href="/about"
           />
         </div>
       </div>

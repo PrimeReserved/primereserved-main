@@ -65,9 +65,9 @@ const ClientReviews: React.FC = () => {
   return (
     <section className="w-full py-12">
       <div className="container mx-auto">
-        <div className="mb-8 text-left">
-          <p className="text-lg font-bold text-primary">CLIENT REVIEWS</p>
-          <h2 className="text-3xl font-bold">
+        <div className="mb-16 text-left">
+          <p className="py-2 text-lg font-bold text-primary">CLIENT REVIEWS</p>
+          <h2 className="py-2 text-3xl font-bold">
             See What Our Clients Say About Us!
           </h2>
         </div>

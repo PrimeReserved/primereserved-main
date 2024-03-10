@@ -3,7 +3,7 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Services from "@/components/Services";
 import Hero from "@/components/Hero";
-import ContactForm from "@/components/Contact/ContactForm.tsx/ContactForm";
+import ContactForm from "@/components/Contact/ContactForm/ContactForm";
 import { Metadata } from "next";
 import FAQs from "@/components/FAQs/FAQs";
 import ClientReviews from "@/components/ClientReviews/ClientReviews";

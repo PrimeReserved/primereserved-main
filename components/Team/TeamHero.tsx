@@ -7,13 +7,13 @@ const TeamHero: React.FC = () => {
       {/* First Column */}
       <div className="mb-8 flex max-w-md flex-col items-start gap-4 md:mb-0 md:mr-8 lg:max-w-xl">
         <h1
-          className="mb-4 text-3xl font-extrabold text-primary md:text-left md:text-5xl xl:text-6xl"
+          className="mb-4 text-2xl font-extrabold text-primary md:text-left md:text-4xl xl:text-5xl"
           style={{ lineHeight: "1.4" }}
         >
           Meet The team
         </h1>
         {/* Paragraph */}
-        <p className="mb-6 text-lg leading-relaxed text-customTextColor md:text-left md:text-2xl">
+        <p className="mb-6 text-lg leading-relaxed text-customTextColor md:text-left md:text-xl">
           Meet the dedicated individuals who drive our company forward with
           their expertise, creativity, and commitment
         </p>
