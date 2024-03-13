@@ -4,7 +4,8 @@ import { FiPhone, FiMail } from "react-icons/fi";
 const ContactForm = () => {
   return (
     <section
-      className="wow fadeInUp relative z-10 w-full bg-customBg"
+      className="wow fadeInUp dark:bg-customDarkBg relative z-10 w-full bg-customBg"
+      id="contact-section"
       data-wow-delay=".1s"
     >
       <div className="container mx-auto px-4 py-8">

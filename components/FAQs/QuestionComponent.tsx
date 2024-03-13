@@ -24,7 +24,10 @@ const QuestionComponent: React.FC<QuestionProps> = ({
               className="rounded-full bg-primary p-1 text-white"
             />
           ) : (
-            <FiChevronDown size={30} className="rounded-full bg-gray-200 p-1" />
+            <FiChevronDown
+              size={30}
+              className="rounded-full bg-gray-200 p-1 text-customTextColor"
+            />
           )}
         </button>
       </div>

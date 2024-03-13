@@ -6,15 +6,15 @@ import IconButton from "../Buttons/IconButton";
 
 const ImageCardOne = () => {
   return (
-    <section className="w-full bg-customBg">
+    <section className="dark:bg-customDarkBg w-full bg-customBg">
       <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-8 py-12 md:flex-row">
         {/* Column 1: Image */}
         <div className="mb-8 md:w-1/2 lg:mb-0">
           <Image
             src="/images/homepage-images-2/expertgrouped-mobile.png"
             alt="Expert image"
-            width={500}
-            height={400}
+            width={600}
+            height={700}
             className="h-auto w-full md:w-auto"
           />
         </div>
@@ -26,29 +26,29 @@ const ImageCardOne = () => {
           <h2 className="mb-4 text-lg font-bold lg:text-3xl">
             Empowering Your Online Presence
           </h2>
-          <p className="text-md my-4 text-customTextColor md:text-lg">
+          <p className="text-md dark:text-customDarkTextColor my-4 text-customTextColor md:text-lg">
             At PrimeReserved, we are dedicated to transforming your digital
             landscape. Our expertise goes beyond conventional boundaries,
             delivering innovative solutions that drive growth and success.
           </p>
           <ul className="my-4">
-            <li className="mb-4 flex items-center text-lg font-semibold">
+            <li className="dark:text-customDarkTextColor mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Professional Designs
             </li>
-            <li className="mb-4 flex items-center text-lg font-semibold">
+            <li className="dark:text-customDarkTextColor mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Proven Expertise
             </li>
-            <li className="mb-4 flex items-center text-lg font-semibold">
+            <li className="dark:text-customDarkTextColor mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Cutting Edge Development
             </li>
-            <li className="mb-4 flex items-center text-lg font-semibold">
+            <li className="dark:text-customDarkTextColor mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               User centric Approach
             </li>
-            <li className="mb-4 flex items-center text-lg font-semibold">
+            <li className="dark:text-customDarkTextColor mb-4 flex items-center text-lg font-semibold">
               <FiCheck className="mr-2 text-lg" />
               Timely Delivery
             </li>

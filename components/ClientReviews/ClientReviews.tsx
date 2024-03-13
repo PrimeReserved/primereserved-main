@@ -71,25 +71,37 @@ const ClientReviews: React.FC = () => {
             See What Our Clients Say About Us!
           </h2>
         </div>
-        <div className="relative overflow-hidden">
-          <div className="flex items-center justify-center space-x-4">
+        <div className="relative">
+          <div className="flex items-center justify-between">
             <button
-              className="absolute left-0 top-1/2 -translate-y-1/2 transform focus:outline-none"
+              className="absolute left-0 top-1/2 -translate-y-1/2 transform focus:outline-none md:block"
               onClick={handlePrev}
             >
               <FiChevronLeft className="text-4xl text-primary" />
             </button>
-            {testimonials.map((testimonial, index) => (
-              <TestimonialBox
-                key={index}
-                {...testimonial}
-                hideOverflow={index === currentIndex + 2}
-              />
-            ))}
+            <div className="flex overflow-hidden">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialBox
+                  key={index}
+                  {...testimonial}
+                  hideOverflow={
+                    index < currentIndex || index > currentIndex + 2
+                  }
+                />
+              ))}
+            </div>
             <button
-              className="absolute right-0 top-1/2 -translate-y-1/2 transform focus:outline-none"
+              className="absolute right-0 top-1/2 -translate-y-1/2 transform focus:outline-none md:block"
               onClick={handleNext}
             >
+              <FiChevronRight className="text-4xl text-primary" />
+            </button>
+          </div>
+          <div className="mt-4 flex justify-between md:hidden">
+            <button className="focus:outline-none" onClick={handlePrev}>
+              <FiChevronLeft className="text-4xl text-primary" />
+            </button>
+            <button className="focus:outline-none" onClick={handleNext}>
               <FiChevronRight className="text-4xl text-primary" />
             </button>
           </div>
@@ -125,8 +137,10 @@ const TestimonialBox: React.FC<TestimonialBoxProps> = ({
         hideOverflow ? "overflow-hidden" : ""
       }`}
     >
-      <FaQuoteLeft className="my-8 ml-3 text-3xl text-gray-600" />
-      <p className="mb-8 text-sm text-black">{quote}</p>
+      <FaQuoteLeft className="my-8 ml-3 text-3xl text-gray-600 dark:text-white" />
+      <p className="dark:text-customDarkTextColor mb-8 text-sm text-black">
+        {quote}
+      </p>
       <div className="flex items-center gap-4">
         <Image
           src={image}
@@ -137,8 +151,12 @@ const TestimonialBox: React.FC<TestimonialBoxProps> = ({
         />
         <div className="flex flex-col">
           <p className="text-sm font-bold">{name}</p>
-          <p className="text-sm text-gray-600">{position}</p>
-          <p className="text-sm text-gray-600">{location}</p>
+          <p className="dark:text-customDarkTextColor text-sm text-gray-600">
+            {position}
+          </p>
+          <p className="dark:text-customDarkTextColor text-sm text-gray-600">
+            {location}
+          </p>
         </div>
       </div>
     </div>

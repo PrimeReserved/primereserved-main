@@ -1,8 +1,11 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import IconButton from "../Buttons/IconButton";
-import BtnArrowIcon from "../Buttons/BtnArrowIcon";
+
+const DynamicScrollToContactButton = React.lazy(
+  () => import("../Buttons/ScrollToContactButton"),
+);
 
 const Footer = () => {
   return (
@@ -37,7 +40,9 @@ const Footer = () => {
                   for businesses of all sizes, from startups to enterprises.
                 </p>
 
-                <IconButton text="Contact us" icon={<BtnArrowIcon />} />
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <DynamicScrollToContactButton />
+                </React.Suspense>
 
                 <div className="mt-8 items-center xs:hidden md:flex">
                   <a className="mr-6 text-2xl text-white">Follow Us</a>

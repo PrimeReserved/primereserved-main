@@ -21,16 +21,16 @@ const FAQs: React.FC = () => {
   };
 
   return (
-    <section className="bg-url('/images/homepage-images-2/BG.png') w-full bg-cover">
-      <div className="container mx-auto py-8">
+    <section className="bg-url('/images/homepage-images-2/BG.png') relative w-full bg-cover">
+      <div className="container relative mx-auto py-8">
         <div className="flex flex-col items-center gap-4 xs:py-4 md:py-8">
           <p className="py-2 text-lg font-bold text-primary">FAQs</p>
           <h1 className="py-2 text-center text-3xl font-bold">
             You Have Questions We Have Answers
           </h1>
         </div>
-        <div className="mt-8 flex flex-col items-center justify-between md:flex-row">
-          <div className="mb-4 md:mb-0 md:w-1/3">
+        <div className="relative mt-8 flex flex-col items-center justify-between md:flex-row">
+          <div className="absolute left-0 top-0 mb-4 md:mb-0 md:w-1/3">
             <Image
               src="/images/homepage-images/faq.svg"
               alt="FAQ Image"

@@ -1,13 +1,13 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import IconButton from "../Buttons/IconButton";
-import BtnArrowIcon from "../Buttons/BtnArrowIcon";
-import ContactFormPopup from "../Contact/ContactForm/ContactFormPopup";
+
+const DynamicScrollToContactButton = React.lazy(() => import('../Buttons/ScrollToContactButton'));
 
 const Header = () => {
   // Navbar toggle
@@ -41,10 +41,11 @@ const Header = () => {
 
   const usePathName = usePathname();
 
+
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center border-b-2 border-gray-100 ${
+        className={`header left-0 top-0 z-40 flex w-full items-center border-b-2 border-gray-100 dark:border-gray-dark ${
           sticky
             ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
             : "absolute bg-transparent"
@@ -163,7 +164,9 @@ const Header = () => {
               </div>
               <div className="flex items-center justify-end gap-4 pr-16 lg:pr-0">
                 <div className="hidden md:flex">
-                  <IconButton text="Contact us" icon={<BtnArrowIcon />} />
+                <React.Suspense fallback={<div>Loading...</div>}>
+        <DynamicScrollToContactButton />
+      </React.Suspense>
                 </div>
                 <div>
                   <ThemeToggler />

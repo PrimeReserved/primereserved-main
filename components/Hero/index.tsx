@@ -1,8 +1,10 @@
 import React from "react";
 import { BiRocket } from "react-icons/bi";
 import Image from "next/image";
-import IconButton from "../Buttons/IconButton";
-import BtnArrowIcon from "../Buttons/BtnArrowIcon";
+
+const DynamicScrollToContactButton = React.lazy(
+  () => import("../Buttons/ScrollToContactButton"),
+);
 
 const Hero: React.FC = () => {
   return (
@@ -10,7 +12,7 @@ const Hero: React.FC = () => {
       {/* First Column */}
       <div className="mb-8 flex max-w-md flex-col items-start gap-4 md:mb-0 md:mr-8 lg:max-w-xl">
         {/* Button */}
-        <button className="mb-4 flex cursor-text items-center rounded-full bg-gray-100 px-4 py-3 text-sm">
+        <button className="mb-4 flex cursor-text items-center rounded-full bg-gray-100 px-4 py-3 text-sm dark:text-customDarkBg">
           Elevate your brand
           <span className="ml-2 text-primary">
             <BiRocket />
@@ -25,13 +27,15 @@ const Hero: React.FC = () => {
           Inspiring <span className="text-primary underline">Innovation</span>
         </h1>
         {/* Paragraph */}
-        <p className="mb-6 text-lg leading-relaxed text-customTextColor md:text-left md:text-xl">
+        <p className="mb-6 text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-left md:text-xl">
           PrimeReserved—Your Ultimate Destination for Outstanding Website
           Designs and Seamless Web Application Developments. Your satisfaction
           is our prime reserve!
         </p>
         {/* Contact Button */}
-        <IconButton text="Contact us" icon={<BtnArrowIcon />} />
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <DynamicScrollToContactButton />
+        </React.Suspense>
       </div>
       {/* Second Column */}
       <div className="flex justify-center md:justify-end">
