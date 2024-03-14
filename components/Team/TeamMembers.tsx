@@ -160,7 +160,7 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           border-radius: 50%;
           overflow: hidden;
           background-color: lightgray;
-          padding: 5px;
+          padding: 0 5px;
           margin-bottom: 10px;
           display: flex;
           justify-content: center;
