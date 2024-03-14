@@ -78,7 +78,7 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
                 />
               </div>
             </div>
-            <p className="name">{selectedMember.name}</p>
+            <p className="name dark:text-[#1e232e]">{selectedMember.name}</p>
             <p className="position">{selectedMember.position}</p>
             <div className="links">
               {selectedMember.linkedIn && (
@@ -118,8 +118,13 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
                 </a>
               )}
             </div>
-            <div className="description">{selectedMember.description}</div>
-            <button className="close-button" onClick={closePopup}>
+            <div className="description dark:text-[#1e232e]">
+              {selectedMember.description}
+            </div>
+            <button
+              className="close-button dark:text-[#1e232e]"
+              onClick={closePopup}
+            >
               X
             </button>
           </div>
