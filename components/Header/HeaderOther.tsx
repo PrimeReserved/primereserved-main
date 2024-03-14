@@ -113,7 +113,7 @@ const HeaderOther = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-1 lg:py-3 ${
+                            className={`flex py-4 text-base lg:mr-0 lg:inline-flex lg:px-1 lg:py-8 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -159,10 +159,13 @@ const HeaderOther = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="flex lg:hidden">
+                    <IconButton text="Contact Us" icon={<BtnArrowIcon />} />
+                  </div>
                 </nav>
               </div>
               <div className="flex items-center justify-end gap-4 pr-16 lg:pr-0">
-                <div className="my-2 hidden md:flex">
+                <div className="my-2 hidden lg:flex">
                   <IconButton text="Contact Us" icon={<BtnArrowIcon />} />
                 </div>
                 <div>

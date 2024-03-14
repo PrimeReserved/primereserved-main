@@ -36,7 +36,7 @@ const FooterHome = () => {
 
               <IconButton text="Contact Us" icon={<BtnArrowIcon />} />
 
-              <div className="mt-8 flex items-center xs:hidden md:flex">
+              <div className="mt-8 hidden items-center md:flex">
                 <span className="text-md mr-6 text-white lg:text-2xl">
                   Follow Us
                 </span>

@@ -43,7 +43,7 @@ const FAQs: React.FC = () => {
                 height={400}
               />
             </div>
-            <div className="p-4 dark:bg-customDarkBg xs:bg-white md:w-2/3 md:bg-transparent">
+            <div className="bg-white p-4 dark:bg-customDarkBg md:w-2/3 md:bg-transparent lg:bg-transparent">
               <QuestionComponent
                 question="What is your focus as a creative agency?"
                 isOpen={isOpen[0]}

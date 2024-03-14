@@ -66,63 +66,71 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
         ))}
       </div>
       {selectedMember && (
-        <div className="popup">
+        <div className="popup bg-white dark:bg-[#1e232e]">
           <div className="content">
-            <div className="flex items-center justify-center">
-              <div className="avatar w-32">
-                <Image
-                  src={selectedMember.avatar}
-                  alt={selectedMember.name}
-                  width={150} // Same size as on the page
-                  height={150} // Same size as on the page
-                />
+            <div className="flex flex-col items-center justify-between md:flex-row md:gap-8">
+              <div>
+                <div className="flex items-center justify-center">
+                  <div className="avatar w-32">
+                    <Image
+                      src={selectedMember.avatar}
+                      alt={selectedMember.name}
+                      width={150} // Same size as on the page
+                      height={150} // Same size as on the page
+                    />
+                  </div>
+                </div>
+                <p className="name dark:text-customDarkTextColor">
+                  {selectedMember.name}
+                </p>
+                <p className="position">{selectedMember.position}</p>
+                <div className="links">
+                  {selectedMember.linkedIn && (
+                    <a
+                      href={selectedMember.linkedIn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin />
+                    </a>
+                  )}
+                  {selectedMember.github && (
+                    <a
+                      href={selectedMember.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                    </a>
+                  )}
+                  {selectedMember.gmail && (
+                    <a
+                      href={`mailto:${selectedMember.gmail}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaEnvelope />
+                    </a>
+                  )}
+                  {selectedMember.behance && (
+                    <a
+                      href={selectedMember.behance}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaBehance />
+                    </a>
+                  )}
+                </div>
+              </div>
+              <div>
+                <div className="description dark:text-customDarkTextColor">
+                  {selectedMember.description}
+                </div>
               </div>
             </div>
-            <p className="name dark:text-[#1e232e]">{selectedMember.name}</p>
-            <p className="position">{selectedMember.position}</p>
-            <div className="links">
-              {selectedMember.linkedIn && (
-                <a
-                  href={selectedMember.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-              )}
-              {selectedMember.github && (
-                <a
-                  href={selectedMember.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub />
-                </a>
-              )}
-              {selectedMember.gmail && (
-                <a
-                  href={`mailto:${selectedMember.gmail}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaEnvelope />
-                </a>
-              )}
-              {selectedMember.behance && (
-                <a
-                  href={selectedMember.behance}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaBehance />
-                </a>
-              )}
-            </div>
-            <div className="description dark:text-[#1e232e]">
-              {selectedMember.description}
-            </div>
             <button
-              className="close-button dark:text-[#1e232e]"
+              className="close-button bg-white dark:bg-[#1e232e] dark:text-[#1e232e]"
               onClick={closePopup}
             >
               X
@@ -188,16 +196,16 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
 
         .popup {
           position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          top: 17%;
+          left: 10%;
+          // transform: translate(-50%, -50%);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          width: 60%;
-          background-color: white;
+          width: 80%;
+          height: 80vh;
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 20px;
+          padding: 0.5rem 3.5rem;
           border-radius: 10px;
           box-sizing: border-box;
           z-index: 9999;
@@ -233,18 +241,39 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           border-radius: 10px;
           padding: 20px;
           margin-bottom: 10px;
-          max-height: 250px; /* Limit the maximum height for scrolling */
+          max-height: 450px; /* Limit the maximum height for scrolling */
           overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
         }
 
         .close-button {
           border: none;
-          background-color: transparent;
-          font-size: 20px;
+          color: grey;
+          font-size: 18px;
           cursor: pointer;
           position: absolute;
-          top: 10px;
-          right: 10px;
+          top: -10px;
+          right: -40px;
+          padding: 10px;
+        }
+
+        @media (max-width: 767px) {
+          .description {
+            max-height: 250px;
+          }
+
+          .popup {
+            top: 10.5%;
+            left: 10%;
+            width: 80%;
+            height: 89vh;
+            padding: 0.5rem 3.5rem;
+          }
+
+          .close-button {
+            font-size: 18px;
+            top: 30px;
+            right: 0px;
+          }
         }
       `}</style>
     </div>

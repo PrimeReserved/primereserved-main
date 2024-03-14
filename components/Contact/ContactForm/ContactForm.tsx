@@ -25,19 +25,25 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="mb-1 text-lg font-bold">Phone:</p>
-                    <p className="mb-2">+234 (0) 706 5682 515</p>
-                    <p className="mb-2">+234 (0) 810 3155 891</p>
+                    <p className="mb-2 text-sm md:text-lg">
+                      +234 (0) 706 5682 515
+                    </p>
+                    <p className="mb-2 text-sm md:text-lg">
+                      +234 (0) 810 3155 891
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="flex-1">
+              <div className="ml-2 flex-1">
                 <div>
                   <div className="mb-4 flex w-fit flex-col items-center justify-center rounded-full bg-gray-200 p-2">
                     <FiMail size={24} className="text-primary" />
                   </div>
                   <div>
                     <p className="mb-1 text-lg font-bold">E-mail:</p>
-                    <p>primereserveteam@gmail.com</p>
+                    <p className="mb-2 text-sm md:text-lg">
+                      primereserveteam@gmail.com
+                    </p>
                   </div>
                 </div>
               </div>
