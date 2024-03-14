@@ -4,7 +4,7 @@ import { FiPhone, FiMail } from "react-icons/fi";
 const ContactForm = () => {
   return (
     <section
-      className="wow fadeInUp dark:bg-customDarkBg relative z-10 w-full bg-customBg"
+      className="wow fadeInUp relative z-10 w-full bg-customBg dark:bg-customDarkBg"
       id="contact-section"
       data-wow-delay=".1s"
     >
@@ -143,7 +143,7 @@ const ContactForm = () => {
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
+                className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3rem] py-4 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
               >
                 Submit message
               </button>

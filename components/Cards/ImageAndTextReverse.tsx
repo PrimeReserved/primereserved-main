@@ -25,7 +25,9 @@ const ImageAndTextReverse: React.FC<ImageAndTextReverseProps> = ({
       </div>
       <div className="pr-8 pt-4 md:w-1/2 md:max-w-md md:pr-12 md:pt-0">
         <h2 className="mb-4 text-2xl font-bold">{header}</h2>
-        <p className="text-gray-600">{paragraph}</p>
+        <p className="text-gray-600 dark:text-customDarkTextColor">
+          {paragraph}
+        </p>
       </div>
     </div>
   );

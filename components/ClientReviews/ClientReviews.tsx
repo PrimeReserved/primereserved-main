@@ -97,14 +97,6 @@ const ClientReviews: React.FC = () => {
               <FiChevronRight className="text-4xl text-primary" />
             </button>
           </div>
-          <div className="mt-4 flex justify-between md:hidden">
-            <button className="focus:outline-none" onClick={handlePrev}>
-              <FiChevronLeft className="text-4xl text-primary" />
-            </button>
-            <button className="focus:outline-none" onClick={handleNext}>
-              <FiChevronRight className="text-4xl text-primary" />
-            </button>
-          </div>
         </div>
       </div>
     </section>
@@ -138,7 +130,7 @@ const TestimonialBox: React.FC<TestimonialBoxProps> = ({
       }`}
     >
       <FaQuoteLeft className="my-8 ml-3 text-3xl text-gray-600 dark:text-white" />
-      <p className="dark:text-customDarkTextColor mb-8 text-sm text-black">
+      <p className="mb-8 text-sm text-black dark:text-customDarkTextColor">
         {quote}
       </p>
       <div className="flex items-center gap-4">
@@ -151,10 +143,10 @@ const TestimonialBox: React.FC<TestimonialBoxProps> = ({
         />
         <div className="flex flex-col">
           <p className="text-sm font-bold">{name}</p>
-          <p className="dark:text-customDarkTextColor text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-customDarkTextColor">
             {position}
           </p>
-          <p className="dark:text-customDarkTextColor text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-customDarkTextColor">
             {location}
           </p>
         </div>

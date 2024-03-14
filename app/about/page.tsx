@@ -23,9 +23,9 @@ const AboutPage = () => {
             imageUrl="/images/about/About-2nd-image.jpg"
             header="Our Mission"
             paragraph="PrimeReserved is an innovative IT company with a team of experts
-            dedicated to crafting exceptional web solutions. Our goal is to push
-            the boundaries of the digital world and redefine the digital
-            landscape for our clients."
+          dedicated to crafting exceptional web solutions. Our goal is to push
+          the boundaries of the digital world and redefine the digital
+          landscape for our clients."
           />
 
           <OurValueCard
@@ -44,9 +44,9 @@ const AboutPage = () => {
             imageUrl="/images/about/About-3rd-image.jpg"
             header="Our Team"
             paragraph="Our team is composed of industry leading experts, including
-            developers, designers, project managers, and strategists. We
-            confidently tackle complex IT challenges with excellence and are
-            always pushing the boundaries to achieve more."
+           developers, designers, project managers, and strategists. We
+           confidently tackle complex IT challenges with excellence and are
+           always pushing the boundaries to achieve more."
           />
         </div>
       </section>

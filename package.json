@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@mui/icons-material": "^5.15.12",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",

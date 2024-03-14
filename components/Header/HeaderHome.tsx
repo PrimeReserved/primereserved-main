@@ -7,7 +7,9 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
-const DynamicScrollToContactButton = React.lazy(() => import('../Buttons/ScrollToContactButton'));
+const DynamicScrollToContactButton = React.lazy(
+  () => import("../Buttons/ScrollToContactButton"),
+);
 
 const Header = () => {
   // Navbar toggle
@@ -40,7 +42,6 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
-
 
   return (
     <>
@@ -114,7 +115,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-3 lg:py-3 ${
+                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-1 lg:py-3 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -163,10 +164,10 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end gap-4 pr-16 lg:pr-0">
-                <div className="hidden md:flex">
-                <React.Suspense fallback={<div>Loading...</div>}>
-        <DynamicScrollToContactButton />
-      </React.Suspense>
+                <div className="my-2 hidden md:flex">
+                  <React.Suspense fallback={<div>Loading...</div>}>
+                    <DynamicScrollToContactButton />
+                  </React.Suspense>
                 </div>
                 <div>
                   <ThemeToggler />
