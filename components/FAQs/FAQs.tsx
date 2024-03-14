@@ -33,8 +33,8 @@ const FAQs: React.FC = () => {
               You Have Questions We Have Answers
             </h1>
           </div>
-          <div className="mt-8 flex flex-col md:flex-row md:items-start md:justify-between">
-            <div className="mb-4 md:w-1/3">
+          <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between">
+            <div className="mb-4 xs:hidden md:flex md:w-1/3">
               <Image
                 src="/images/homepage-images/faq.svg"
                 alt="FAQ Image"

@@ -16,7 +16,7 @@ const QuestionComponent: React.FC<QuestionProps> = ({
   return (
     <div className="mb-6 w-full py-4">
       <div className="flex cursor-pointer items-center justify-between">
-        <p className="font-semibold xs:text-lg md:text-xl">{question}</p>
+        <p className="mr-4 font-semibold xs:text-lg md:text-xl">{question}</p>
         <button onClick={onClick}>
           {isOpen ? (
             <FiChevronUp

@@ -103,7 +103,7 @@ growth and enhancing customer engagement."
           business goals."
           />
           <ImageAndText
-            imageUrl="/images/services-images/aboutOurServices.png"
+            imageUrl="/images/services-images/mobileDesign.png"
             header="Mobile Development"
             paragraph="Build engaging mobile apps for all devices. We create 
             native and cross-platform apps with exceptional user 
@@ -114,7 +114,7 @@ growth and enhancing customer engagement."
           />
 
           <ImageAndTextReverse
-            imageUrl="/images/services-images/aboutOurServices.png"
+            imageUrl="/images/services-images/teamTraining.png"
             header="Team Training"
             paragraph="Empower your team with customized training 
             in web technologies and marketing 
@@ -137,7 +137,7 @@ growth and enhancing customer engagement."
           />
 
           <ImageAndTextReverse
-            imageUrl="/images/services-images/aboutOurServices.png"
+            imageUrl="/images/services-images/technicalSupport.png"
             header="Technical Support"
             paragraph="Get peace of mind with our round-the-clock 
             support team. We provide expert assistance 

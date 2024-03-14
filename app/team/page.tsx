@@ -140,11 +140,14 @@ const TeamPage = () => {
         paragraph="We craft digital experiences from concept to creation"
         members={developersData}
       />
-      <ImageAndText
-        imageUrl="/images/team-images/endSectionIllustration.svg"
-        header="Together We Shape the Future of Technology"
-        paragraph="Reach out to us today and be a part of our journey toward a brighter tomorrow."
-      />
+
+      <div className="container mx-auto py-8">
+        <ImageAndText
+          imageUrl="/images/team-images/endSectionIllustration.svg"
+          header="Together We Shape the Future of Technology"
+          paragraph="Reach out to us today and be a part of our journey toward a brighter tomorrow."
+        />
+      </div>
       <ContactForm />
     </>
   );

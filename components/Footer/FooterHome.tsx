@@ -6,7 +6,7 @@ import DynamicScrollToContactButton from "../Buttons/ScrollToContactButton";
 
 const FooterHome = () => {
   return (
-    <footer className="relative z-10 bg-customSecondary pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
+    <footer className="relative z-10 bg-customSecondary pt-16 dark:bg-customDarkBg md:pt-20 lg:pt-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 md:w-1/2 lg:w-6/12 xl:w-6/12">
@@ -38,7 +38,9 @@ const FooterHome = () => {
               </React.Suspense>
 
               <div className="mt-8 flex items-center xs:hidden md:flex">
-                <span className="mr-6 text-2xl text-white">Follow Us</span>
+                <span className="text-md mr-6 text-white lg:text-2xl">
+                  Follow Us
+                </span>
                 <SocialLink
                   href="/"
                   image="/images/icons/linkedIn-logo.svg"
@@ -68,7 +70,31 @@ const FooterHome = () => {
             <Services />
           </div>
         </div>
+        <hr className="h-px w-full bg-[#D2D8E183] xs:flex md:hidden" />
 
+        <div className="my-4 flex items-center justify-center xs:flex md:hidden">
+          <span className="text-md mr-6 text-white">Follow Us</span>
+          <SocialLink
+            href="/"
+            image="/images/icons/linkedIn-logo.svg"
+            alt="LinkedIn"
+          />
+          <SocialLink
+            href="/"
+            image="/images/icons/youtube-logo.svg"
+            alt="Youtube"
+          />
+          <SocialLink
+            href="/"
+            image="/images/icons/ig-logo.svg"
+            alt="Instagram"
+          />
+          <SocialLink
+            href="/"
+            image="/images/icons/fb-logo.svg"
+            alt="Facebook"
+          />
+        </div>
         <hr className="h-px w-full bg-[#D2D8E183]" />
 
         <Copyright />
@@ -89,7 +115,7 @@ const SocialLink: React.FC<{ href: string; image: string; alt: string }> = ({
     aria-label="social-link"
     className="dark:text-white-dark mr-6 text-white duration-300 hover:text-primary dark:hover:text-primary"
   >
-    <Image src={image} alt={alt} width={40} height={30} />
+    <Image src={image} alt={alt} width={36} height={30} />
   </a>
 );
 

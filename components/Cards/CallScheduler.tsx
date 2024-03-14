@@ -14,7 +14,7 @@ const CallScheduler: React.FC = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40">
         {/* Text Content */}
         <h1 className="text-3xl font-bold text-white">Get On A Call With Us</h1>
-        <p className="text-md my-6 px-20 text-white md:px-40 md:text-lg">
+        <p className="text-md my-6 px-20 text-center text-white md:px-40 md:text-lg">
           Would you like to hear from our team for more clarification? then jump
           on this call and have doubts cleared, with just a few minutes
           conversation.

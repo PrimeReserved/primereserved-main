@@ -13,7 +13,7 @@ const ImageAndTextReverse: React.FC<ImageAndTextReverseProps> = ({
   paragraph,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-between px-4 py-8 md:flex-row-reverse md:px-8">
+    <div className="flex flex-col items-center justify-between px-4 py-8 transition duration-300 ease-in-out hover:scale-105 md:flex-row-reverse md:px-8">
       <div className="md:w-1/2">
         <Image
           src={imageUrl}

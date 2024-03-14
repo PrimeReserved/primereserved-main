@@ -103,7 +103,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               </label>
               <select
                 id="serviceRequired"
-                className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none dark:bg-[#1e232e]"
                 required
               >
                 <option value="">Select Your Service</option>

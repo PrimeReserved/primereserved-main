@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface BoxData {
   heading: string;
@@ -19,12 +19,13 @@ const DesignFlow: React.FC<DesignFlowProps> = ({ boxesData }) => {
           {boxesData.map((box, index) => (
             <div
               key={index}
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-6"
+              className="w-full p-6 transition duration-300 ease-in-out hover:scale-105 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3"
             >
               <div
-                className={`bg-${box.backgroundColor} text-${box.textColor} rounded-lg shadow-lg p-8`}
+                className={`bg-${box.backgroundColor} text-${box.textColor} flex flex-col items-center justify-center rounded-lg p-8 shadow-lg`}
+                style={{ minWidth: "300px", height: "230px" }}
               >
-                <h2 className="text-xl font-semibold mb-4">{box.heading}</h2>
+                <h2 className="mb-4 text-xl font-semibold">{box.heading}</h2>
                 <p className="text-sm">{box.paragraph}</p>
               </div>
             </div>
