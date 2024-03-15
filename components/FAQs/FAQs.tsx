@@ -34,7 +34,7 @@ const FAQs: React.FC = () => {
             </h1>
           </div>
           <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="mb-4 xs:hidden md:flex md:w-1/3">
+            <div className="mb-4 hidden md:flex md:w-1/3">
               <Image
                 src="/images/homepage-images/faq.svg"
                 alt="FAQ Image"

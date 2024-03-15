@@ -25,10 +25,10 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="mb-1 text-lg font-bold">Phone:</p>
-                    <p className="mb-2 text-sm md:text-lg">
+                    <p className="mb-2 text-xs sm:text-sm md:text-lg">
                       +234 (0) 706 5682 515
                     </p>
-                    <p className="mb-2 text-sm md:text-lg">
+                    <p className="mb-2 text-xs sm:text-sm md:text-lg">
                       +234 (0) 810 3155 891
                     </p>
                   </div>
@@ -41,7 +41,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="mb-1 text-lg font-bold">E-mail:</p>
-                    <p className="mb-2 text-sm md:text-lg">
+                    <p className="mb-2 text-xs sm:text-sm md:text-lg">
                       primereserveteam@gmail.com
                     </p>
                   </div>

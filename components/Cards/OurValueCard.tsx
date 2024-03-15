@@ -16,7 +16,7 @@ const OurValueCard: React.FC<OurValueCardProps> = ({
   ourPurposeParagraph,
 }) => {
   return (
-    <div className="container mx-auto my-8 rounded-2xl bg-customSecondary py-2">
+    <div className="container mx-auto my-8 rounded-2xl bg-customSecondary py-2 dark:bg-[#1e232e]">
       <div className="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-8">
         <div className="bg-customSecondary p-10">
           <h2 className="mb-2 pt-2 text-xl font-bold text-white md:pt-8">
