@@ -78,19 +78,22 @@ const ServicesPage = () => {
         />
         <CenteredHeading text="We Are Specialized In The Following" />
         <div className="container mx-auto py-8">
-          <ImageAndText
-            imageUrl="/images/services-images/web-dev.png"
-            header="Web Development"
-            paragraph="Create a captivating website with our developers. We handle the 
+          <div id="webDevelopment">
+            <ImageAndText
+              imageUrl="/images/services-images/web-dev.png"
+              header="Web Development"
+              paragraph="Create a captivating website with our developers. We handle the 
 entire process for a tailored online presence. Our team 
 delivers responsive, user-friendly sites, driving business 
 growth and enhancing customer engagement."
-          />
+            />
+          </div>
 
-          <ImageAndTextReverse
-            imageUrl="/images/services-images/web-design.png"
-            header="Web Design"
-            paragraph="Elevate your online presence with captivating 
+          <div id="webDesign">
+            <ImageAndTextReverse
+              imageUrl="/images/services-images/web-design.png"
+              header="Web Design"
+              paragraph="Elevate your online presence with captivating 
           and user-friendly designs. Our experts craft 
           visually appealing interfaces that reinforce 
           your brand identity. Through collaboration, we 
@@ -100,22 +103,26 @@ growth and enhancing customer engagement."
           From wire framing to prototyping, every aspect 
           of your website aligns seamlessly with your 
           business goals."
-          />
-          <ImageAndText
-            imageUrl="/images/services-images/mobileDesign.png"
-            header="Mobile Development"
-            paragraph="Build engaging mobile apps for all devices. We create 
+            />
+          </div>
+          <div id="mobileDevelopment">
+            <ImageAndText
+              imageUrl="/images/services-images/mobileDesign.png"
+              header="Mobile Development"
+              paragraph="Build engaging mobile apps for all devices. We create 
             native and cross-platform apps with exceptional user 
             experiences. Our mobile development services cover 
             iOS, Android, cross-platform, and web apps, guided by 
             experienced developers. From ideation to deployment, 
             we ensure quality and user satisfaction."
-          />
+            />
+          </div>
 
-          <ImageAndTextReverse
-            imageUrl="/images/services-images/teamTraining.png"
-            header="Team Training"
-            paragraph="Empower your team with customized training 
+          <div id="teamTraining">
+            <ImageAndTextReverse
+              imageUrl="/images/services-images/teamTraining.png"
+              header="Team Training"
+              paragraph="Empower your team with customized training 
             in web technologies. Our flexible sessions, including 
             workshops and virtual seminars, cater to 
             diverse learning styles and schedules. Our 
@@ -123,22 +130,27 @@ growth and enhancing customer engagement."
             examples for actionable insights, fostering 
             technical proficiency, collaboration, and 
             leadership development"
-          />
-          <ImageAndText
-            imageUrl="/images/services-images/security-audit.png"
-            header="Security Audits"
-            paragraph="Secure your website and data with our expert audits and 
+            />
+          </div>
+          <div id="securityAudits">
+            <ImageAndText
+              imageUrl="/images/services-images/security-audit.png"
+              header="Security Audits"
+              paragraph="Secure your website and data with our expert audits and 
             proactive measures. Our certified security experts 
             assess and mitigate risks to protect your digital assets, 
             offering tailored solutions for compliance and peace of 
             mind."
-          />
+            />
+          </div>
 
-          <ImageAndTextReverse
-            imageUrl="/images/services-images/technicalSupport.png"
-            header="Technical Support"
-            paragraph="We are a delight to our clients with our round-the-clock support team. We provide expert assistance for any technical issues, from software glitches to hardware malfunctions. Our services aim to minimize downtime, maximize productivity, and optimize performance, with flexible support options tailored to your needs."
-          />
+          <div id="technicalSupport">
+            <ImageAndTextReverse
+              imageUrl="/images/services-images/technicalSupport.png"
+              header="Technical Support"
+              paragraph="We are a delight to our clients with our round-the-clock support team. We provide expert assistance for any technical issues, from software glitches to hardware malfunctions. Our services aim to minimize downtime, maximize productivity, and optimize performance, with flexible support options tailored to your needs."
+            />
+          </div>
           <CenteredHeading text="Our Design Flow" />
           <DesignFlow boxesData={boxesData} />
         </div>

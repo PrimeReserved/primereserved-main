@@ -42,22 +42,22 @@ const FooterHome = () => {
                   Follow Us
                 </span>
                 <SocialLink
-                  href="/"
+                  href="https://www.linkedin.com/company/primereserved"
                   image="/images/icons/linkedIn-logo.svg"
                   alt="LinkedIn"
                 />
                 <SocialLink
-                  href="/"
+                  href="https://www.youtube.com/@primereservedtech"
                   image="/images/icons/youtube-logo.svg"
                   alt="Youtube"
                 />
                 <SocialLink
-                  href="/"
+                  href="https://www.instagram.com/primereservedtech"
                   image="/images/icons/ig-logo.svg"
                   alt="Instagram"
                 />
                 <SocialLink
-                  href="/"
+                  href="https://www.facebook.com/groups/1554028415142497/"
                   image="/images/icons/fb-logo.svg"
                   alt="Facebook"
                 />
@@ -75,7 +75,7 @@ const FooterHome = () => {
         <div className="my-4 flex items-center justify-center xs:flex md:hidden">
           <span className="text-md mr-6 text-white">Follow Us</span>
           <SocialLink
-            href="/"
+            href="https://www.linkedin.com/company/primereserved"
             image="/images/icons/linkedIn-logo.svg"
             alt="LinkedIn"
           />
@@ -85,12 +85,12 @@ const FooterHome = () => {
             alt="Youtube"
           />
           <SocialLink
-            href="/"
+            href="https://www.instagram.com/primereservedtech"
             image="/images/icons/ig-logo.svg"
             alt="Instagram"
           />
           <SocialLink
-            href="/"
+            href="https://www.facebook.com/groups/1554028415142497/"
             image="/images/icons/fb-logo.svg"
             alt="Facebook"
           />
@@ -169,7 +169,7 @@ const Services = () => (
     <ul>
       <li>
         <Link
-          href="/web-development"
+          href="/services#webDevelopment"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Web Development
@@ -177,7 +177,7 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/web-design"
+          href="/services#webDesign"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Web Design
@@ -185,7 +185,7 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/mobile-development"
+          href="/services#mobileDevelopment"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Mobile Development
@@ -193,7 +193,7 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/team-training"
+          href="/services#teamTraining"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Team Training
@@ -201,7 +201,7 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/security-audits"
+          href="/services#SecurityAudits"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Security Audits
@@ -209,7 +209,7 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/technical-support"
+          href="/services#technicalSupport"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Technical Support
