@@ -29,8 +29,8 @@ const Hero: React.FC = () => {
         {/* Paragraph */}
         <p className="mb-6 text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-left md:text-xl">
           PrimeReserved—Your Ultimate Destination for Outstanding Website
-          Designs and Seamless Web Application Developments. Your satisfaction
-          is our prime reserve!
+          Designs and Seamless Application Developments. Your satisfaction is
+          our prime reserve!
         </p>
         {/* Contact Button */}
         <React.Suspense fallback={<div>Loading...</div>}>

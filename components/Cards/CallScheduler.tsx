@@ -15,9 +15,8 @@ const CallScheduler: React.FC = () => {
         {/* Text Content */}
         <h1 className="text-3xl font-bold text-white">Get On A Call With Us</h1>
         <p className="text-md my-6 px-20 text-center text-white md:px-40 md:text-lg">
-          Would you like to hear from our team for more clarification? then jump
-          on this call and have doubts cleared, with just a few minutes
-          conversation.
+          Would you like to hear from our team for more clarification? <br />
+          Then jump on a call with us and have your questions answered.
         </p>
         <IconButton text="Contact us now" icon={<BtnArrowIcon />} />
       </div>

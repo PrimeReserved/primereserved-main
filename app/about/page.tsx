@@ -21,32 +21,55 @@ const AboutPage = () => {
         <div className="container mx-auto py-8">
           <ImageAndTextReverse
             imageUrl="/images/about/About-2nd-image.jpg"
-            header="Our Mission"
-            paragraph="PrimeReserved is an innovative IT company with a team of experts
-          dedicated to crafting exceptional web solutions. Our goal is to push
-          the boundaries of the digital world and redefine the digital
-          landscape for our clients."
+            header="Our Vision"
+            paragraph="Empowering Innovation, PrimeReserved envisions a world where cutting-edge technology transforms possibilities into realities, driving progress and excellence across industries."
           />
 
           <OurValueCard
-            ourValueHeading="Our Value"
-            ourValueParagraph="At PrimeReserved, our core values of Integrity, 
-        Excellence, Innovation, and Collaboration set us apart. 
-        We strive to exceed expectations and deliver innovative 
-        solutions that surpass our clients' needs."
-            ourPurposeHeading="Our Purpose"
-            ourPurposeParagraph="To create an IT company that not only solves 
-        problems but also pushes the boundaries of 
-        what's possible in the digital realm."
+            ourValueHeading="Our Core Values"
+            ourValueParagraph={
+              <span>
+                <p className="my-2 border-l-4 border-primary px-2 font-semibold">
+                  Integrity:
+                </p>
+                Integrity is at the core of everything we do. We uphold the
+                highest ethical standards, building trust with clients,
+                partners, and our team.
+                <p className="my-2 border-l-4 border-primary px-2 font-semibold">
+                  Client-Centric Approach:
+                </p>
+                Our success is tied to the success of our clients. We prioritize
+                understanding their needs and delivering tailored, high-quality
+                solutions that drive tangible results.
+              </span>
+            }
+            ourPurposeHeading="Our Mission"
+            ourPurposeParagraph={
+              <span>
+                <p>
+                  At PrimeReserved, our mission is to craft exceptional user
+                  experiences and engaging digital content that propel
+                  businesses forward. Through collaborative partnerships and
+                  continuous innovation, we strive to exceed client
+                  expectations, ensuring sustainable growth and a lasting impact
+                  on the global tech landscape.
+                </p>
+                <span className="text-sm">
+                  <p className="my-2 border-l-4 border-primary px-2 font-semibold">
+                    Innovation:
+                  </p>
+                  We foster a culture of continuous learning and creativity,
+                  embracing challenges as opportunities to pioneer
+                  groundbreaking solutions.
+                </span>
+              </span>
+            }
           />
 
           <ImageAndText
             imageUrl="/images/about/About-3rd-image.jpg"
             header="Our Team"
-            paragraph="Our team is composed of industry leading experts, including
-           developers, designers, project managers, and strategists. We
-           confidently tackle complex IT challenges with excellence and are
-           always pushing the boundaries to achieve more."
+            paragraph="Here at PrimeReserved, we love what we do! We are a rare combination of great minds. From the software engineering and development department, to the product and design department, etc, we are driven by a unified vision and passion. Our exceptionalism truly comes from having one mind as a team—an outstanding conglutinated team here at PrimeReserved."
           />
         </div>
       </section>

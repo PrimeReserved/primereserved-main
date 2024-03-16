@@ -18,44 +18,44 @@ export const metadata: Metadata = {
 
 const boxesData = [
   {
-    heading: "User Research",
+    heading: "Consultation",
     paragraph:
-      "To ensure your app meets users' expectations, we do in-depth user research to understand their needs, desires, and pain points as well as your competitors' magic fingers.",
+      "This is the first stage of contact with us. We learn about the fundamentals of your project idea in a summarized manner then go in-depth over a scheduled Discovery Call.",
     backgroundColor: "customBg",
     textColor: "black",
   },
   {
-    heading: "Information Architecture",
+    heading: "Discovery Phase",
     paragraph:
-      "With I.A your mobile app's navigation and user journey should be smooth and seamless.",
+      "This phase could be a single call or not, depending on the state of project idea. The Discovery Phase seeks to uncover and learn about the project in greater depth.",
+    backgroundColor: "customSecondary",
+    textColor: "white",
+  },
+  {
+    heading: "Research and Data",
+    paragraph:
+      "Some clients love us to do the thinking for them. And so, after the Discovery Phase, we would go through a quick and structured research process tailored to your project and gather data.",
+    backgroundColor: "customBg",
+    textColor: "black",
+  },
+  {
+    heading: "Structured SRS",
+    paragraph:
+      "Once we have all necessary data, we'd create and walk you through a well-structured Software Requirements Specification (SRS) for documentation purposes.",
     backgroundColor: "customSecondary",
     textColor: "white",
   },
   {
     heading: "UI/UX Design",
     paragraph:
-      "Your users want a seamless and user-centric experience. Our comprehensive interface and experience design experts deliver more than your expectations.",
+      "Our Product Design and UI/UX Team begin sketching, wire-framing, and designing based on your needs as realized from the previous processes and data gathered.",
     backgroundColor: "customBg",
     textColor: "black",
   },
   {
-    heading: "Visual Identity",
+    heading: "Client Review",
     paragraph:
-      "Your mobile app must be understandable and accessible by your users. Our visual identity design achieves that and more.",
-    backgroundColor: "customSecondary",
-    textColor: "white",
-  },
-  {
-    heading: "Develop",
-    paragraph:
-      "Understand that we work with your idea, however, enhanced by our team of experts to provide you the best result, ready for use.",
-    backgroundColor: "customBg",
-    textColor: "black",
-  },
-  {
-    heading: "Usability Testing",
-    paragraph:
-      "To enhance the user experience of your mobile app, we critically evaluate the user journey with care, identifying areas of improvement.",
+      "This is not the final process but the next. Every client is sent a template of our entire process with timelines. This is the first client review phase.",
     backgroundColor: "customSecondary",
     textColor: "white",
   },
@@ -81,8 +81,7 @@ const ServicesPage = () => {
           <ImageAndText
             imageUrl="/images/services-images/web-dev.png"
             header="Web Development"
-            paragraph="Create a captivating website with our developers. From 
-simple brochures to complex e-commerce, we handle the 
+            paragraph="Create a captivating website with our developers. We handle the 
 entire process for a tailored online presence. Our team 
 delivers responsive, user-friendly sites, driving business 
 growth and enhancing customer engagement."
@@ -92,7 +91,7 @@ growth and enhancing customer engagement."
             imageUrl="/images/services-images/web-design.png"
             header="Web Design"
             paragraph="Elevate your online presence with captivating 
-          and user-friendly design. Our experts craft 
+          and user-friendly designs. Our experts craft 
           visually appealing interfaces that reinforce 
           your brand identity. Through collaboration, we 
           understand your objectives and design 
@@ -117,8 +116,7 @@ growth and enhancing customer engagement."
             imageUrl="/images/services-images/teamTraining.png"
             header="Team Training"
             paragraph="Empower your team with customized training 
-            in web technologies and marketing 
-            strategies. Our flexible sessions, including 
+            in web technologies. Our flexible sessions, including 
             workshops and virtual seminars, cater to 
             diverse learning styles and schedules. Our 
             experienced trainers provide real-world 
@@ -139,21 +137,16 @@ growth and enhancing customer engagement."
           <ImageAndTextReverse
             imageUrl="/images/services-images/technicalSupport.png"
             header="Technical Support"
-            paragraph="Get peace of mind with our round-the-clock 
-            support team. We provide expert assistance 
-            for any technical issues, from software 
-            glitches to hardware malfunctions. Our 
-            services aim to minimize downtime, 
-            maximize productivity, and optimize IT 
-            performance, with flexible support options 
-            tailored to your needs and budget."
+            paragraph="We are a delight to our clients with our round-the-clock support team. We provide expert assistance for any technical issues, from software glitches to hardware malfunctions. Our services aim to minimize downtime, maximize productivity, and optimize performance, with flexible support options tailored to your needs."
           />
           <CenteredHeading text="Our Design Flow" />
           <DesignFlow boxesData={boxesData} />
         </div>
       </section>
       <CallScheduler />
-      <CenteredHeading text="Why PrimeReserved" />
+      <div className="pt-16">
+        <CenteredHeading text="Why PrimeReserved" />
+      </div>
       <WhyPrimeReserved />
       <FAQFullScreen />
       <ContactForm />

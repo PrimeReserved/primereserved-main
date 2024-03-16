@@ -46,7 +46,7 @@ const FooterHome = () => {
                   alt="LinkedIn"
                 />
                 <SocialLink
-                  href="/"
+                  href="https://www.youtube.com/@primereservedtech"
                   image="/images/icons/youtube-logo.svg"
                   alt="Youtube"
                 />

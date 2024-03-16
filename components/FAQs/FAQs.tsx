@@ -45,52 +45,52 @@ const FAQs: React.FC = () => {
             </div>
             <div className="bg-white p-4 dark:bg-customDarkBg md:w-2/3 md:bg-transparent lg:bg-transparent">
               <QuestionComponent
-                question="What is your focus as a creative agency?"
+                question="What is PrimeReserved's focus?"
                 isOpen={isOpen[0]}
                 onClick={() => toggleFAQ(0)}
               />
               <AnswerComponent
-                answer="Embark on a technological voyage with PrimeReserved as we revolutionize web development landscapes. Our expertise lies in architecting robust online experiences, meticulously designed for the dynamic demands of industry leaders."
+                answer="PrimeReserved focuses on not just building innovative solutions, but helping other businesses grow by offering our expertise in web design and development, mobile development, team training, technical support, and security audits."
                 isOpen={isOpen[0]}
               />
 
               <QuestionComponent
-                question="What sets PrimeReserved apart from other creative agencies?"
+                question="What sets PrimeReserved apart?"
                 isOpen={isOpen[1]}
                 onClick={() => toggleFAQ(1)}
               />
               <AnswerComponent
-                answer="PrimeReserved stands out due to its innovative approach, unparalleled expertise, and commitment to delivering exceptional results. Our team comprises industry experts who are dedicated to understanding client needs and providing tailored solutions that drive success."
+                answer="PrimeReserved stands out due to its innovative approach, unparalleled expertise, and commitment to delivering exceptional results. Our team comprises of industry experts who are dedicated to understanding client needs and providing tailored solutions that drive success."
                 isOpen={isOpen[1]}
               />
 
               <QuestionComponent
-                question="What services do you offer to startups and how can they add value to my business?"
+                question="Can you redesign our app/website?"
                 isOpen={isOpen[2]}
                 onClick={() => toggleFAQ(2)}
               />
               <AnswerComponent
-                answer="Our agency offers a range of services tailored to startups, including web design, development, branding, and digital marketing. These services can add significant value to your business by enhancing your online presence, attracting customers, and driving growth."
+                answer="Yes, we specialize in not only creating from scratch, but also redesigning and revamping existing apps and websites to improve their functionality, user experience, and visual appeal. Our team will work closely with you to understand your goals and deliver a redesigned solution that exceeds your expectations."
                 isOpen={isOpen[2]}
               />
 
               <QuestionComponent
-                question="Can you redesign our app/website?"
+                question="What is your Design and Development Process like?"
                 isOpen={isOpen[3]}
                 onClick={() => toggleFAQ(3)}
               />
               <AnswerComponent
-                answer="Yes, we specialize in redesigning and revamping existing apps and websites to improve their functionality, user experience, and visual appeal. Our team will work closely with you to understand your goals and deliver a redesigned solution that exceeds your expectations."
+                answer="Our Design and Development process is a structured process that is indeed loved by our clients because they're part of the journey in an amazing way. Contact us and we'd walk you through it!"
                 isOpen={isOpen[3]}
               />
 
               <QuestionComponent
-                question="How much does a UI/UX project cost?"
+                question="Tell me about the company's name—PrimeReserved."
                 isOpen={isOpen[4]}
                 onClick={() => toggleFAQ(4)}
               />
               <AnswerComponent
-                answer="The cost of a UI/UX project varies depending on factors such as the scope of work, complexity, and timeline. We offer customized pricing based on your specific requirements and budget. Contact us to discuss your project, and we'll provide a detailed quote."
+                answer="Let's answer this one with a question: 'How would you like to be at a place where the prime and uniquely excellent things are reserved for you always?' Yeah? That's what we thought! :) Here at PrimeReserved, your satisfaction is our prime reserve. Get in contact with us. We'd love to hear from you!"
                 isOpen={isOpen[4]}
               />
             </div>

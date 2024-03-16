@@ -7,19 +7,19 @@ const WhyPrimeReserved = () => {
 
   const boxesData = [
     {
-      heading: "Smart",
+      heading: "Specialization",
       paragraph:
-        "With our knowledge on Specificity, Measurable, Attenable, Relevant and Time bound, be assured of getting nothing but the best from our team of Experts. Delivering within time frame and making sure the best is what you get, makes us unique.",
+        "Our services as displayed here on our website are our specialty. We derive great joy from helping our clients; individuals and businesses of different sizes, bring their projects to life as this helps us live out our mission and vision remarkably.",
     },
     {
-      heading: "Best Relationship With Clients",
+      heading: "Premium Support",
       paragraph:
-        "Primereserved is interested in creating one of the best relationships with their clients. In the field of business, our clients receives the best attention as their comfort is our topmost priority.",
+        "We are an amazing team with a great wealth of experience over the years, and we know the power of excellent and consistent support. We provide that, admire it, and endorse it. This makes us exceptional at providing outstanding support to our clients.",
     },
     {
       heading: "User Centric",
       paragraph:
-        "Primereserved is interested in creating one of the best relationships with their clients. In the field of business, our clients receives the best attention as their comfort is our topmost priority.",
+        "Beyond the fact that there's a lot to consider when building a product, we cannot overemphasize the importance of your users' needs. It's highly important and we give it our A-game.",
     },
     {
       heading: "Innovative Solutions",
@@ -29,12 +29,7 @@ const WhyPrimeReserved = () => {
     {
       heading: "Customer Satisfaction",
       paragraph:
-        "Our primary focus is customer satisfaction. We go above and beyond to ensure that our clients are happy with our services. Your success is our success.",
-    },
-    {
-      heading: "Reliable Support",
-      paragraph:
-        "We provide reliable support to our clients throughout their journey with us. Our dedicated team is always available to address any issues and provide assistance whenever needed.",
+        "Our primary focus is customer satisfaction. We go above and beyond to ensure that our clients are happy with our services. Your success is our success. And we also say 'Your satisfaction is our prime reserve!'",
     },
     // Add more boxes here
   ];
@@ -57,7 +52,7 @@ const WhyPrimeReserved = () => {
         {boxesData.map((box, index) => (
           <div
             key={index}
-            className={`mx-2 flex w-64 transform flex-col justify-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-300 ease-in-out hover:scale-105 ${
+            className={`mx-2 flex w-64 transform flex-col justify-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-white ${
               index >= currentIndex && index < currentIndex + 3 ? "" : "hidden"
             }`}
             style={{ minWidth: "300px", height: "400px", zIndex: 1 }}

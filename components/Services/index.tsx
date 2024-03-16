@@ -77,31 +77,31 @@ const servicesData: ServiceBoxProps[] = [
   {
     title: "Web Development",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "As much as we love our clients to think, we also love to think with them. Let our software engineering team bring your ideas/projects to fruition.",
     isFirst: false,
   },
   {
     title: "Technical Support",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "We provide technical support to individuals, businesses, and teams of different sizes. Reach out to us today if you or your team needs support.",
     isFirst: false,
   },
   {
     title: "Mobile Applications",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "From idea to code, and beyond, our software team delivers user-centric state-of-the-art cutting-edge applications that are loved by your users.",
     isFirst: false,
   },
   {
     title: "Team Training",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "Anything worth doing is worth training for. Do you have a team that requires training in any of the services we offer? Reach out to us today!",
     isFirst: false,
   },
   {
     title: "Security Audits",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "Great products and solutions only have great worth when they are all-round reliable. Our team prioritizes not just building but also securing.",
     isFirst: false,
   },
 ];

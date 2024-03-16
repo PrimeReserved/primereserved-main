@@ -16,7 +16,7 @@ const TeamHero: React.FC = () => {
         </p>
       </div>
       {/* Second Column */}
-      <div className="justify-center xs:hidden md:flex md:justify-end">
+      <div className="hidden md:flex md:justify-end">
         <Image
           src="/images/team-images/newUploads/heroDesktop.png"
           alt="The Team"
@@ -25,7 +25,7 @@ const TeamHero: React.FC = () => {
           className="rounded-lg"
         />
       </div>
-      <div className="justify-center xs:flex md:hidden md:justify-end">
+      <div className="flex justify-center md:hidden">
         <Image
           src="/images/team-images/newUploads/heroMobile.png"
           alt="The Team"

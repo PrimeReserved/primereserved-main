@@ -255,18 +255,18 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           right: -40px;
           padding: 10px;
         }
-
+        // Mobile
         @media (max-width: 767px) {
           .description {
-            max-height: 250px;
+            max-height: 300px;
           }
 
           .popup {
-            top: 10.5%;
-            left: 10%;
-            width: 80%;
+            top: 10%;
+            left: 5%;
+            width: 90%;
             height: 89vh;
-            padding: 0.5rem 3.5rem;
+            padding: 0.2rem 1.5rem;
           }
 
           .close-button {
