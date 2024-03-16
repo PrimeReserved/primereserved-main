@@ -51,7 +51,12 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
       <div className="members-container">
         {members.map((member, index) => (
           <div key={index} onClick={() => openPopup(member)} className="member">
-            <div className="avatar">
+            <div
+              className="avatar"
+              style={{
+                backgroundColor: index % 2 === 0 ? "#F9ECFF" : "lightgray",
+              }}
+            >
               <Image
                 src={member.avatar}
                 alt={member.name}
@@ -71,7 +76,15 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
             <div className="flex flex-col items-center justify-between md:flex-row md:gap-8">
               <div>
                 <div className="flex items-center justify-center">
-                  <div className="avatar w-32">
+                  <div
+                    className="avatar w-32"
+                    style={{
+                      backgroundColor:
+                        members.indexOf(selectedMember) % 2 === 0
+                          ? "#F9ECFF"
+                          : "lightgray",
+                    }}
+                  >
                     <Image
                       src={selectedMember.avatar}
                       alt={selectedMember.name}
@@ -172,7 +185,6 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
         .avatar {
           border-radius: 50%;
           overflow: hidden;
-          background-color: lightgray;
           margin: 10px;
           display: flex;
           justify-content: center;
