@@ -224,10 +224,10 @@ const Copyright = () => (
       Copyright © 2024 PrimeReserved. All rights reserved
     </p>
     <div className="flex items-center justify-center gap-8">
-      <Link href="/" className="text-base text-white dark:text-white">
+      <Link href="/terms" className="text-base text-white dark:text-white">
         Terms and Conditions
       </Link>
-      <Link href="/" className="text-base text-white dark:text-white">
+      <Link href="/privacy" className="text-base text-white dark:text-white">
         Privacy Policy
       </Link>
     </div>
