@@ -1,9 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const WhyPrimeReserved = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const boxesData = [
     {
@@ -46,23 +59,30 @@ const WhyPrimeReserved = () => {
     );
   };
 
+  const displayBoxesCount = windowWidth >= 768 ? 3 : 1; // 768px is typically considered as the breakpoint for desktop view
+
+  // Calculate the starting index of the three boxes to be displayed
+  const startIndex = currentIndex % boxesData.length;
+
   return (
     <div className="relative w-full overflow-hidden py-8">
       <div className="flex h-auto items-center justify-center">
-        {boxesData.map((box, index) => (
-          <div
-            key={index}
-            className={`mx-2 flex w-64 transform flex-col justify-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-white ${
-              index >= currentIndex && index < currentIndex + 3 ? "" : "hidden"
-            }`}
-            style={{ minWidth: "300px", height: "400px", zIndex: 1 }}
-          >
-            <h3 className="mb-4 text-center text-lg font-bold">
-              {box.heading}
-            </h3>
-            <p className="text-center text-base leading-6">{box.paragraph}</p>
-          </div>
-        ))}
+        {[0, 1, 2].map((index) => {
+          const dataIndex = (startIndex + index) % boxesData.length;
+          const box = boxesData[dataIndex];
+          return (
+            <div
+              key={index}
+              className={`mx-2 flex w-64 transform flex-col justify-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-white`}
+              style={{ minWidth: "300px", height: "400px", zIndex: 1 }}
+            >
+              <h3 className="mb-4 text-center text-lg font-bold">
+                {box.heading}
+              </h3>
+              <p className="text-center text-base leading-6">{box.paragraph}</p>
+            </div>
+          );
+        })}
       </div>
       <button
         className="absolute left-10 top-1/2 z-10 -translate-y-1/2 transform focus:outline-none"

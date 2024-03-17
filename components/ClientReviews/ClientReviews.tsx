@@ -46,7 +46,7 @@ const ClientReviews: React.FC<ClientReviewsProps> = ({ testimonials }) => {
       `}</style>
       <div className="mb-4 flex flex-row items-center justify-between md:p-8">
         <div className="flex flex-col">
-          <p className="text-md font-bold text-primary md:text-2xl">
+          <p className="text-md mb-4 font-bold text-primary md:text-2xl">
             CLIENT REVIEWS
           </p>
           <h2 className="text-lg font-bold text-white md:text-3xl">
