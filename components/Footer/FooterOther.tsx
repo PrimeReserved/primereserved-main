@@ -200,7 +200,7 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/services#SecurityAudits"
+          href="/services#securityAudits"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
           Security Audits
