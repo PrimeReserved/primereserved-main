@@ -11,7 +11,7 @@ const ImageCardOne = () => {
         {/* Column 1: Image */}
         <div className="mb-8 p-4 md:flex-1 lg:mb-0">
           <Image
-            src="/images/homepage-images-2/expertgrouped-mobile.png"
+            src="/images/homepage-images-two/expertgrouped-mobile.png"
             alt="Expert image"
             width={800}
             height={700}

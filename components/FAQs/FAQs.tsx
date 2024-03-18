@@ -23,7 +23,7 @@ const FAQs: React.FC = () => {
   return (
     <section
       className="relative bg-cover"
-      style={{ backgroundImage: `url('/images/homepage-images-2/BG.png')` }}
+      style={{ backgroundImage: `url('/images/homepage-images-two/BG.png')` }}
     >
       <div className="dark:bg-customDarkBg">
         <div className="container relative mx-auto py-8">

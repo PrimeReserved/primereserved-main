@@ -20,7 +20,7 @@ const FAQFullScreen: React.FC = () => {
   };
 
   return (
-    <section className="bg-url('/images/homepage-images-2/BG.png') w-full bg-cover">
+    <section className="bg-url('/images/homepage-images-two/BG.png') w-full bg-cover">
       <div className="container py-8">
         <div className="flex flex-col items-center gap-4 xs:py-4 md:py-8">
           {/* <p className="text-lg font-bold text-primary">FAQFullScreen</p> */}
