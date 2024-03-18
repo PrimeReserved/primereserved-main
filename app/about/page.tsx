@@ -18,7 +18,7 @@ const AboutPage = () => {
       <section className="relative z-10 overflow-hidden pt-20 lg:pt-[90px]"></section>
       <AboutHero />
       <section className="lg:px-20">
-        <div className="container mx-auto py-8">
+        <div className="container mx-auto pt-8">
           <ImageAndTextReverse
             imageUrl="/images/about/About-2nd-image.jpg"
             header="Our Vision"
@@ -74,7 +74,9 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <Services />
+      <div className="pt-[-20px]">
+        <Services />
+      </div>
     </>
   );
 };
