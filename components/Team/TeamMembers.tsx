@@ -208,12 +208,12 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
 
         .popup {
           position: fixed;
-          top: 17%;
+          top: 15%;
           left: 10%;
           // transform: translate(-50%, -50%);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           width: 80%;
-          height: 80vh;
+          height: 83vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -263,7 +263,7 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           font-size: 18px;
           cursor: pointer;
           position: absolute;
-          top: -80px;
+          top: -50px;
           right: -35px;
           padding: 10px;
         }
