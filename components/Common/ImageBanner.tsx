@@ -7,7 +7,7 @@ const ImageBanner = () => {
       {/* Desktop Image */}
       <div className="hidden md:block">
         <Image
-          src="/images/homepage-images-2/banner1desktop.png"
+          src="/images/homepage-images-two/bannerOnedesktop.png"
           alt="Desktop Image"
           layout="responsive"
           width={1920}
@@ -17,7 +17,7 @@ const ImageBanner = () => {
       {/* Mobile Image */}
       <div className="block md:hidden">
         <Image
-          src="/images/homepage-images-2/banner1mobile.png"
+          src="/images/homepage-images-two/bannerOnemobile.png"
           alt="Mobile Image"
           layout="responsive"
           width={375}

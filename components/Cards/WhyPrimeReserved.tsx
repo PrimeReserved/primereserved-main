@@ -4,18 +4,22 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const WhyPrimeReserved = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleResize);
+    // Check if window object is defined before accessing it
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const boxesData = [
@@ -44,7 +48,7 @@ const WhyPrimeReserved = () => {
       paragraph:
         "Our primary focus is customer satisfaction. We go above and beyond to ensure that our clients are happy with our services. Your success is our success. And we also say 'Your satisfaction is our prime reserve!'",
     },
-    // Add more boxes here
+    // Add more data for other boxes here
   ];
 
   const handlePrev = () => {
@@ -59,15 +63,15 @@ const WhyPrimeReserved = () => {
     );
   };
 
-  const displayBoxesCount = windowWidth >= 768 ? 3 : 1; // 768px is typically considered as the breakpoint for desktop view
+  const displayBoxesCount = windowWidth >= 768 ? 3 : 1; // Adjust the breakpoint as needed
 
-  // Calculate the starting index of the three boxes to be displayed
+  // Calculate the starting index of the boxes to be displayed
   const startIndex = currentIndex % boxesData.length;
 
   return (
     <div className="relative w-full overflow-hidden py-8">
       <div className="flex h-auto items-center justify-center">
-        {[0, 1, 2].map((index) => {
+        {[...Array(displayBoxesCount)].map((_, index) => {
           const dataIndex = (startIndex + index) % boxesData.length;
           const box = boxesData[dataIndex];
           return (
