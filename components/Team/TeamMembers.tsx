@@ -263,8 +263,8 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           font-size: 18px;
           cursor: pointer;
           position: absolute;
-          top: -10px;
-          right: -40px;
+          top: -80px;
+          right: -35px;
           padding: 10px;
         }
         // Mobile
@@ -278,12 +278,12 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
             left: 5%;
             width: 90%;
             height: 89vh;
-            padding: 0.2rem 1.5rem;
+            padding: 3rem 1.5rem 0.2rem 1.5rem;
           }
 
           .close-button {
             font-size: 18px;
-            top: 30px;
+            top: -30px;
             right: 0px;
           }
         }

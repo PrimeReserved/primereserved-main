@@ -1,5 +1,5 @@
 "use client";
-import ImageAndText from "@/components/Cards/ImageAndText";
+import ImageAndTextJustForTeam from "@/components/Cards/ImageAndTextJustForTeam";
 import ContactForm from "@/components/Contact/ContactForm/ContactForm";
 import TeamHero from "@/components/Team/TeamHero";
 import TeamMembers from "@/components/Team/TeamMembers";
@@ -141,9 +141,17 @@ const TeamPage = () => {
         members={developersData}
       />
 
-      <div className="container mx-auto py-8">
-        <ImageAndText
+      <div className="container mx-auto block py-8 dark:hidden">
+        <ImageAndTextJustForTeam
           imageUrl="/images/team-images/endSectionIllustration.svg"
+          header="Together We Shape the Future of Technology"
+          paragraph="Reach out to us today and be a part of our journey toward a brighter tomorrow."
+        />
+      </div>
+
+      <div className="container mx-auto hidden py-8 dark:block">
+        <ImageAndTextJustForTeam
+          imageUrl="/images/team-images/newUploads/endIllustrationDarkMode.svg"
           header="Together We Shape the Future of Technology"
           paragraph="Reach out to us today and be a part of our journey toward a brighter tomorrow."
         />
