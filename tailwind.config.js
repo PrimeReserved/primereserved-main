@@ -44,10 +44,17 @@ module.exports = {
         // primary: "#4A6CF7",
         primary: "#AC04FF",
         yellow: "#FBB040",
+        // PR PRIMARY COLOR
         customPrimary: "#AC04FF",
+        // PR SECONDARY COLOR
         customSecondary: "#0E0014",
+        // BODY TEXT COLOR
         customTextColor: "#79747E",
+        customDarkTextColor: "#ccc",
+        customDarkBg: "#121723",
         customBg: "#F9ECFF",
+        customError: "#B3261E",
+        customSuccess: "#21B31E",
         "body-color": "#788293",
         "body-color-dark": "#959CB1",
         "gray-dark": "#1E232E",

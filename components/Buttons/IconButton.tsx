@@ -1,22 +1,38 @@
-import React from "react";
-import Link from "next/link";
+"use client";
+import React, { useState } from "react";
 import { ReactNode } from "react";
+import ContactFormPopup from "../Contact/ContactForm/ContactFormPopup";
 
 interface IconButtonProps {
   text: string;
-  href: string;
   icon?: ReactNode | false; // Accepts JSX or `false` for conditional rendering
+  // icon?: React.ReactNode;
 }
 
-const IconButton: React.FC<IconButtonProps> = ({ text, href, icon }) => {
+const IconButton: React.FC<IconButtonProps> = ({ text, icon }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleOpenPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
-    <Link href={href}>
-      <span className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[4rem] py-5 text-sm text-white duration-300 ease-in-out hover:bg-primary/80">
+    <>
+      <button
+        className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3rem] py-4 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
+        onClick={handleOpenPopup}
+      >
+        {/* Render icon if provided */}
         <span>{text}</span>
-        {/* Conditionally render icon if it exists */}
         {icon !== false && <span className="ml-2 h-4 w-4">{icon}</span>}
-      </span>
-    </Link>
+        {/* {icon && <span className="ml-2">{icon}</span>} */}
+      </button>
+      {showPopup && <ContactFormPopup onClose={handleClosePopup} />}
+    </>
   );
 };
 

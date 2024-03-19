@@ -1,4 +1,3 @@
-// AnswerComponent.tsx
 import React from "react";
 
 interface AnswerProps {
@@ -11,7 +10,9 @@ const AnswerComponent: React.FC<AnswerProps> = ({ answer, isOpen }) => {
     <div>
       {isOpen && (
         <div className="mt-2">
-          <p className="text-gray-700">{answer}</p>
+          <p className="dark:text-customDarkTextColor text-gray-700">
+            {answer}
+          </p>
         </div>
       )}
       <hr className="my-4 border-t-2 border-gray-300" />

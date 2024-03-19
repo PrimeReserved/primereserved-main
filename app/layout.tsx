@@ -1,7 +1,12 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+// layout.tsx
+import React from "react";
+import { usePathname } from "next/navigation";
+import FooterHome from "@/components/Footer/FooterHome";
+import HeaderHome from "@/components/Header/HeaderHome";
+import HeaderOther from "@/components/Header/HeaderOther";
+import FooterOther from "@/components/Footer/FooterOther";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
@@ -10,29 +15,25 @@ import "../styles/custom.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
-          <Header />
+          {isHomePage ? <HeaderHome /> : <HeaderOther />}
           {children}
-          <Footer />
+          {isHomePage ? <FooterHome /> : <FooterOther />}
           <ScrollToTop />
         </Providers>
       </body>
     </html>
   );
-}
+};
+
+export default Layout;
 
 import { Providers } from "./providers";

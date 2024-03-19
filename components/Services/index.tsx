@@ -3,11 +3,11 @@ import { FiCode } from "react-icons/fi";
 
 const Services: React.FC = () => {
   return (
-    <section className="w-full bg-gray-100 py-12">
+    <section className="w-full py-12">
       <div className="container mx-auto">
-        <div className="mb-8 text-center">
-          <p className="text-lg font-bold text-primary">OUR SERVICES</p>
-          <h2 className="text-3xl font-bold">
+        <div className="mb-16 text-center">
+          <p className="py-2 text-lg font-bold text-primary">OUR SERVICES</p>
+          <h2 className="py-2 text-3xl font-bold">
             We Are Specialized In The Following
           </h2>
         </div>
@@ -34,14 +34,14 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-lg p-6 shadow-lg ${
-        isFirst ? "bg-primary text-white" : "bg-white text-black"
+      className={`group rounded-lg border-2 border-gray-100 p-6 shadow-lg md:hover:bg-primary md:hover:text-white ${
+        isFirst ? "bg-white text-black" : "bg-white text-black"
       }`}
     >
       <div className="mb-6 flex items-start justify-start">
         <div
-          className={`mr-4 rounded-full ${
-            isFirst ? "bg-white text-primary" : "bg-primary text-white"
+          className={`mr-4 rounded-full md:group-hover:bg-white md:group-hover:text-primary ${
+            isFirst ? "bg-primary text-white" : "bg-primary text-white"
           } p-4`}
         >
           <FiCode size={32} />
@@ -49,13 +49,17 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
       </div>
       <div className="text-left">
         <h3
-          className={`mb-4 text-2xl font-bold ${
-            isFirst ? "text-white" : "text-black"
+          className={`mb-4 text-2xl font-bold md:group-hover:text-white ${
+            isFirst ? "text-black" : "text-black"
           }`}
         >
           {title}
         </h3>
-        <p className={`mb-6 ${isFirst ? "text-white" : "text-gray-700"}`}>
+        <p
+          className={`mb-6 md:group-hover:text-white ${
+            isFirst ? "text-gray-700" : "text-gray-700"
+          }`}
+        >
           {description}
         </p>
       </div>
@@ -73,31 +77,31 @@ const servicesData: ServiceBoxProps[] = [
   {
     title: "Web Development",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "As much as we love our clients to think, we also love to think with them. Let our software engineering team bring your ideas/projects to fruition.",
     isFirst: false,
   },
   {
     title: "Technical Support",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "We provide technical support to individuals, businesses, and teams of different sizes. Reach out to us today if you or your team needs support.",
     isFirst: false,
   },
   {
     title: "Mobile Applications",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "From idea to code, and beyond, our software team delivers user-centric state-of-the-art cutting-edge applications that are loved by your users.",
     isFirst: false,
   },
   {
     title: "Team Training",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "Anything worth doing is worth training for. Do you have a team that requires training in any of the services we offer? Reach out to us today!",
     isFirst: false,
   },
   {
     title: "Security Audits",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "Great products and solutions only have great worth when they are all-round reliable. Our team prioritizes not just building but also securing.",
     isFirst: false,
   },
 ];
