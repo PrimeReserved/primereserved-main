@@ -34,13 +34,13 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
 }) => {
   return (
     <div
-      className={`group rounded-lg border-2 border-gray-100 p-6 shadow-lg hover:bg-primary hover:text-white ${
+      className={`group rounded-lg border-2 border-gray-100 p-6 shadow-lg md:hover:bg-primary md:hover:text-white ${
         isFirst ? "bg-white text-black" : "bg-white text-black"
       }`}
     >
       <div className="mb-6 flex items-start justify-start">
         <div
-          className={`mr-4 rounded-full group-hover:bg-white group-hover:text-primary ${
+          className={`mr-4 rounded-full md:group-hover:bg-white md:group-hover:text-primary ${
             isFirst ? "bg-primary text-white" : "bg-primary text-white"
           } p-4`}
         >
@@ -49,14 +49,14 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
       </div>
       <div className="text-left">
         <h3
-          className={`mb-4 text-2xl font-bold group-hover:text-white ${
+          className={`mb-4 text-2xl font-bold md:group-hover:text-white ${
             isFirst ? "text-black" : "text-black"
           }`}
         >
           {title}
         </h3>
         <p
-          className={`mb-6 group-hover:text-white ${
+          className={`mb-6 md:group-hover:text-white ${
             isFirst ? "text-gray-700" : "text-gray-700"
           }`}
         >

@@ -7,13 +7,13 @@ import IconButtonHref from "../Buttons/IconButtonHref";
 const ImageCardOne = () => {
   return (
     <section className="w-full bg-customBg dark:bg-customDarkBg">
-      <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-8 py-12 md:flex-row">
+      <div className="container mx-auto flex flex-col-reverse items-center justify-between gap-4 py-12 md:flex-row">
         {/* Column 1: Image */}
         <div className="mb-8 p-4 md:flex-1 lg:mb-0">
           <Image
             src="/images/homepage-images-two/expertgrouped-mobile.png"
             alt="Expert image"
-            width={800}
+            width={1000}
             height={700}
             className="h-auto w-full md:w-auto"
           />
