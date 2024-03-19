@@ -29,6 +29,10 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Contact/ContactForm"
+<<<<<<< HEAD
 , "components/Contact/FormHandling"  ],
+=======
+  ],
+>>>>>>> 38900fa (Feature/frontend UI update (#3))
   "exclude": ["node_modules"]
 }
