@@ -45,6 +45,7 @@ const ContactForm: React.FC = () => {
     >,
 =======
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -63,14 +64,14 @@ const ContactForm: React.FC = () => {
     event.preventDefault();
     console.log("Form submitted:", formData);
     try {
-      const response = await fetch('http://127.0.0.1:3000/api/contact', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_CONTACT_API}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-      console.log(response.body);
+      console.log(response.json());
       if (!response.ok) throw new Error('Network response was not ok');
     setIsSubmitted(true);
     } catch (error) {
@@ -269,9 +270,11 @@ const ContactForm: React.FC = () => {
               </button>
 =======
             <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
-              {isSubmitted ? (
-                <div className="text-primary">Thank you for your submission!</div>
-              ) : (
+            {isSubmitting ? (
+              <div className="text-primary">Loading...</div>
+            ) : isSubmitted ? (
+              <div className="text-primary">Thank you for your submission!</div>
+            ) : (
                 <>
                   <div className="mb-6">
                     <label
@@ -395,7 +398,7 @@ const ContactForm: React.FC = () => {
                     type="submit"
                     className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    Submit message
+                     {isSubmitting ? "Submitting..." : "Submit message"}
                   </button>
                 </>
               )}
