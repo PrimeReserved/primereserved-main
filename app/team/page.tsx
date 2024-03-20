@@ -1,6 +1,6 @@
 "use client";
 import ImageAndTextJustForTeam from "@/components/Cards/ImageAndTextJustForTeam";
-import ContactForm from "@/components/Contact/ContactForm/ContactForm";
+import ContactForm from "@/components/Contact/FormHandling/ContactForm";
 import TeamHero from "@/components/Team/TeamHero";
 import TeamMembers from "@/components/Team/TeamMembers";
 // import { Metadata } from "next";
