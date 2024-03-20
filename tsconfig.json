@@ -28,8 +28,13 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
+<<<<<<< HEAD
     "components/Contact/FormHandling",
     "components/Contact/ContactFormPopup"
   ],
+=======
+    "components/Contact/ContactForm"
+, "components/Contact/FormHandling"  ],
+>>>>>>> f244f84 (feat: Implement API route for handling contact form submissions)
   "exclude": ["node_modules"]
 }

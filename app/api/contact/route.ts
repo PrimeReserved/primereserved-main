@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 import Contact from '@/models/contact';
 
 
+<<<<<<< HEAD
 export const POST = async (req: Request) => {
   try {
     await dbConnect();
@@ -25,3 +26,16 @@ export const POST = async (req: Request) => {
     }
   }
 };
+=======
+  export const POST = async (req: Request) => {
+    try {
+      await dbConnect();
+      const payload = await req.json();
+      const contact = await Contact.create(payload);
+      return NextResponse.json({ contact });
+    } catch (error) {
+      console.log(error)
+      return error;
+    }
+  };
+>>>>>>> f244f84 (feat: Implement API route for handling contact form submissions)
