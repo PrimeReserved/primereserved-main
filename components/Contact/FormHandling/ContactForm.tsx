@@ -4,23 +4,23 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
 
 interface FormData {
-  full_name: string;
-  company_name: string;
+  fullName: string;
+  companyName: string;
   email: string;
-  phone_number: string;
-  service_required: string;
-  project_details: string;
+  phoneNumber: string;
+  serviceRequired: string;
+  projectDetails: string;
 }
 
 const ContactForm: React.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
-    full_name: "",
-    company_name: "",
+    fullName: "",
+    companyName: "",
     email: "",
-    phone_number: "",
-    service_required: "",
-    project_details: "",
+    phoneNumber: "",
+    serviceRequired: "",
+    projectDetails: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
@@ -32,18 +32,23 @@ const ContactForm: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log("Form submitted:", formData);
-    setFormData({
-      full_name: "",
-      company_name: "",
-      email: "",
-      phone_number: "",
-      service_required: "",
-      project_details: "",
-    });
-    setIsSubmitted(true)
+    try {
+      const response = await fetch('http://127.0.0.1:3000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log(response.body);
+      if (!response.ok) throw new Error('Network response was not ok');
+    setIsSubmitted(true);
+    } catch (error) {
+      console.error(`Failed to submit the form, ${error}`);
+    }
   };
 
   return (
@@ -100,8 +105,8 @@ const ContactForm: React.FC = () => {
                     <input
                       type="text"
                       id="fullName"
-                      name="full_name"
-                      value={formData.full_name}
+                      name="fullName"
+                      value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="Jane Cooper"
                       className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
@@ -119,8 +124,8 @@ const ContactForm: React.FC = () => {
                       <input
                         type="text"
                         id="companyName"
-                        name="company_name"
-                        value={formData.company_name}
+                        name="companyName"
+                        value={formData.companyName}
                         onChange={handleInputChange}
                         placeholder="Ex. Tesla Inc"
                         className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
@@ -156,8 +161,8 @@ const ContactForm: React.FC = () => {
                       <input
                         type="text"
                         id="phoneNumber"
-                        name="phone_number"
-                        value={formData.phone_number}
+                        name="phoneNumber"
+                        value={formData.phoneNumber}
                         onChange={handleInputChange}
                         placeholder="+23581103255892"
                         className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
@@ -172,8 +177,8 @@ const ContactForm: React.FC = () => {
                       </label>
                       <select
                         id="serviceRequired"
-                        name="service_required"
-                        value={formData.service_required}
+                        name="serviceRequired"
+                        value={formData.serviceRequired}
                         onChange={handleInputChange}
                         className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
                         required
@@ -200,8 +205,8 @@ const ContactForm: React.FC = () => {
                     </label>
                     <textarea
                       id="projectDetails"
-                      name="project_details"
-                      value={formData.project_details}
+                      name="projectDetails"
+                      value={formData.projectDetails}
                       onChange={handleInputChange}
                       placeholder="Tell us more about your idea"
                       className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"

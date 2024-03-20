@@ -29,6 +29,6 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Contact/ContactForm"
-  ],
+, "components/Contact/FormHandling"  ],
   "exclude": ["node_modules"]
 }
