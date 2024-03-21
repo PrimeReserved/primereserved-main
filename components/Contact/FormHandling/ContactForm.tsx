@@ -36,7 +36,6 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Form submitted:", formData);
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_CONTACT_API}`, {
         method: 'POST',
@@ -46,8 +45,7 @@ const ContactForm: React.FC = () => {
         body: JSON.stringify(formData),
       });
       const responseData = await response.json();
-      console.log(responseData); // Logging response data
-      if (!response.ok) throw new Error('Network response was not ok');
+      if (!responseData.ok) throw new Error('Network response was not ok');
       setIsSubmitted(true);
     } catch (error) {
       console.error(`Failed to submit the form, ${error}`);
