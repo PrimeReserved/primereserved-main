@@ -1,10 +1,6 @@
 "use client";
 import ImageAndTextJustForTeam from "@/components/Cards/ImageAndTextJustForTeam";
-<<<<<<< HEAD
 import ContactForm from "@/components/Contact/FormHandling/ContactForm";
-=======
-import ContactForm from "@/components/Contact/ContactForm/ContactForm";
->>>>>>> 38900fa (Feature/frontend UI update (#3))
 import TeamHero from "@/components/Team/TeamHero";
 import TeamMembers from "@/components/Team/TeamMembers";
 // import { Metadata } from "next";

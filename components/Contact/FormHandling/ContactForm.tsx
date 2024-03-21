@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import { FiPhone, FiMail } from "react-icons/fi";
-import { FiLoader } from "react-icons/fi";
+import { FiPhone, FiMail, FiLoader } from "react-icons/fi";
 
 interface FormData {
   fullName: string;
