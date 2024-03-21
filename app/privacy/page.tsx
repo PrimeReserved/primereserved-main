@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const PrivacyPolicyPage = () => {
   return (
     <>
-      <div className="px-20 py-28">
+      <div className="p-4 pt-28 md:px-20">
         <PrivacyPolicy />
       </div>
     </>

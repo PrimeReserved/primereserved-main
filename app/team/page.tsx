@@ -18,26 +18,18 @@ const leadersData = [
     position: "Founder/CEO/COO",
     avatar: "/images/team-images/Joshua.png",
     linkedIn: "https://www.linkedin.com/joshua-chris-ofurunna",
+    github: "https://github.com/Joshua-Chris",
     description:
-      "Meet Joshua Chris Ofurunna, a passionate solution-driven front-end developer based in Port Harcourt, Nigeria. With over five years of industry experience, Joshua thrives on exceeding expectations and fostering growth in every project he undertakes. Joshua studied Computer Science at Eastern Polytechnic. Currently serving as the Founder and CEO of PrimeReserved, a dynamic software development company, Joshua leads his team in delivering innovative digital solutions. He is deeply involved in shaping the company's strategic direction, nurturing client relationships, and ensuring project excellence. Under his leadership, PrimeReserved has quickly become a prominent player in the industry, securing key partnerships and contracts.Joshua's expertise extends beyond his role at PrimeReserved. Previously, as a Web Developer at Voisip Telecommunications Limited, he revamped the company's website, managed online platforms, spearheaded client interactions, and collaborated with teams to achieve project objectives. His freelance work showcases his versatility, having delivered tailored websites and applications across sectors such as Oil and Gas, Healthcare, Job Recruitment, Education, etc.Working with the team at PrimeReserved is refreshing for Joshua. He's passionate about team building and consistent growth, admiring exceptionalism as a core value. 'Hi there! I am a Christian who loves to code, create, and win!'",
+      "Meet Joshua Chris Ofurunna, a passionate solution-driven front-end engineer. With over five years of industry experience, Joshua thrives on exceeding expectations and fostering growth in every project he undertakes. Joshua studied Computer Science at Eastern Polytechnic. Currently serving as the Founder and CEO of PrimeReserved, a dynamic software development company, Joshua leads his team in delivering innovative digital solutions. He is deeply involved in shaping the company's strategic direction, nurturing client relationships, and ensuring project excellence. Under his leadership, PrimeReserved has quickly become a prominent player in the industry, securing key partnerships and contracts. Joshua's passionate about team building and consistent growth, admiring exceptionalism as a core value. 'Hi there! I am a Christian who loves to code, create, and win!'",
   },
   {
     name: "Samuel Archibong",
     position: "Co-founder/CTO/CISO",
     avatar: "/images/team-images/Samuel.png",
-    linkedIn: "https://www.linkedin.com/joshua-chris-ofurunna",
-    github: "https://github.com/joshua",
+    linkedIn: "https://www.linkedin.com/in/archibong-samuel",
+    github: "https://github.com/sammiearchie77",
     description:
       "Samuel is proud to be an ALX certified software engineer and ambassador. With a passion for technology and innovation, he has dedicated himself to mastering the art of software development.     Currently, He holds the esteemed position of Chief Technology Officer (CTO), where he leverages his expertise to drive technological advancements and spearhead projects that pushes the boundaries of what's possible. With a commitment to excellence and a drive to make a positive impact, He is excited to continue my journey in the ever-evolving world of technology.",
-  },
-  {
-    name: "Esther Dudu",
-    position: "Project/Product Manager",
-    avatar: "/images/team-images/Oluwaseun.png",
-    linkedIn: "https://www.linkedin.com/joshua-chris-ofurunna",
-    gmail: "joshua@example.com",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper.",
   },
 ];
 
@@ -101,7 +93,7 @@ const developersData = [
     avatar: "/images/team-images/Pascal.png",
     gmail: "paschalophyxial@gmail.com",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper.",
+      "Pascal is passionate about leveraging technology to create impactful solutions and enhance user experiences. With a solid foundation in Python programming and a hunger for learning, he is  excited to dive into the world of web development and contribute to innovative projects. Pascal is equipped with a strong understanding of Python programming fundamentals, writing clean and efficient codes and solving problems using Python's rich ecosystem of libraries and frameworks. He is familiar with Django's core concepts and MVC architecture, has hands-on experience building simple web applications, implementing basic CRUD operations, and working with Django templates and views. He is also proficient in front-end fundamentals, including HTML and CSS, he can create static web pages and style them to achieve visually appealing designs. He is comfortable using Git for version control, understands the basics of collaborative development workflows and is eager to expand his skills in team-based projects.",
   },
   {
     name: "Promise Onyenwe",
