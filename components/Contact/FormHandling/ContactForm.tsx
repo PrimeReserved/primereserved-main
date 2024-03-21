@@ -2,6 +2,7 @@
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
+import { FiLoader } from "react-icons/fi";
 
 interface FormData {
   fullName: string;
@@ -44,9 +45,10 @@ const ContactForm: React.FC = () => {
         },
         body: JSON.stringify(formData),
       });
-      console.log(response.json());
+      const responseData = await response.json();
+      console.log(responseData); // Logging response data
       if (!response.ok) throw new Error('Network response was not ok');
-    setIsSubmitted(true);
+      setIsSubmitted(true);
     } catch (error) {
       console.error(`Failed to submit the form, ${error}`);
     }
@@ -92,11 +94,13 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
             <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
-            {isSubmitting ? (
-              <div className="text-primary">Loading...</div>
-            ) : isSubmitted ? (
-              <div className="text-primary">Thank you for your submission!</div>
-            ) : (
+              {isSubmitting && (
+                <div className="text-primary">Loading...</div>
+              )}
+              {isSubmitted && !isSubmitting && (
+                <div className="text-primary">Thank you for your submission!</div>
+              )}
+              {!isSubmitting && !isSubmitted && (
                 <>
                   <div className="mb-6">
                     <label
@@ -116,6 +120,7 @@ const ContactForm: React.FC = () => {
                       required
                     />
                   </div>
+                  {/* Rest of the form elements */}
                   <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div>
                       <label
@@ -220,7 +225,14 @@ const ContactForm: React.FC = () => {
                     type="submit"
                     className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                     {isSubmitting ? "Submitting..." : "Submit message"}
+                    {isSubmitting ? (
+                      <>
+                        <span className="mr-2">Submitting...</span>
+                        <FiLoader className="animate-spin" />
+                      </>
+                    ) : (
+                      "Submit message"
+                    )}
                   </button>
                 </>
               )}
