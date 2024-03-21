@@ -129,7 +129,7 @@ const TeamPage = () => {
       <TeamMembers
         // backgroundImage="/background.jpg"
         heading="Development Team"
-        paragraph="We turn designs into code and transform them to production-ready products."
+        paragraph="We turn designs into code and transform them to production-ready products"
         members={developersData}
       />
 
