@@ -5,11 +5,7 @@ import ImageAndText from "@/components/Cards/ImageAndText";
 import ImageAndTextReverse from "@/components/Cards/ImageAndTextReverse";
 import ImageTextButton from "@/components/Cards/ImageTextButton";
 import WhyPrimeReserved from "@/components/Cards/WhyPrimeReserved";
-<<<<<<< HEAD
 import ContactForm from "@/components/Contact/FormHandling/ContactForm";
-=======
-import ContactForm from "@/components/Contact/ContactForm/ContactForm";
->>>>>>> 38900fa (Feature/frontend UI update (#3))
 import FAQFullScreen from "@/components/FAQs/FAQFullScreen";
 import ServicesHero from "@/components/Services/ServicesHero";
 import { Metadata } from "next";
