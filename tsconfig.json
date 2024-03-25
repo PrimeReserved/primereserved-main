@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Contact/FormHandling"  
+    "components/Contact/FormHandling",
+    "components/Contact/ContactFormPopup"
   ],
   "exclude": ["node_modules"]
 }
