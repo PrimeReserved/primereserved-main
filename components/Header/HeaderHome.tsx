@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
@@ -44,8 +43,7 @@ const Header = () => {
   const usePathName = usePathname();
 
   return (
-    <>
-      <header
+    <header
         className={`header left-0 top-0 z-40 flex w-full items-center border-b-2 border-gray-100 dark:border-gray-dark ${
           sticky
             ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
@@ -182,7 +180,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-    </>
   );
 };
 

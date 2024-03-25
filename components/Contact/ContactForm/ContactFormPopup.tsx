@@ -1,7 +1,34 @@
-import React from "react";
+"use client"
+
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { FiPhone, FiMail, FiX } from "react-icons/fi";
+import useSubmitForm from '@/hooks/useSubmitForm'
+import IFormData from "@/interfaces/IFormData";
 
 const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+  const { handleSubmit, isSubmitting, isSubmitted, errorMessage } = useSubmitForm(`${process.env.NEXT_PUBLIC_CONTACT_API}`);
+  const [formData, setFormData] = useState<IFormData>({
+    fullName: "",
+    companyName: "",
+    email: "",
+    phoneNumber: "",
+    serviceRequired: "",
+    projectDetails: "",
+  });
+
+  const handleInputChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    handleSubmit(formData, setFormData)
+    
+  };
+
   return (
     <div className="fixed left-0 top-20 z-50 flex h-screen w-full items-center justify-center backdrop-blur-md">
       <div className="h-screen w-11/12 max-w-lg overflow-auto rounded-lg bg-white p-8 text-black shadow-lg dark:bg-[#1e232e] dark:text-white">
@@ -38,7 +65,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
           </div>
         </div>
-        <form className="mt-8 space-y-4 pb-20">
+        <form className="mt-8 space-y-4 pb-20" onSubmit={handleFormSubmit}>
           <div className="mb-6">
             <label htmlFor="fullName" className="text-md mb-2 block font-bold">
               Full Name
@@ -46,6 +73,9 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <input
               type="text"
               id="fullName"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleInputChange}
               placeholder="Jane Cooper"
               className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               required
@@ -62,6 +92,9 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <input
                 type="text"
                 id="companyName"
+                name="companyName"
+                value={formData.companyName}
+                onChange={handleInputChange}
                 placeholder="Ex. Tesla Inc"
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               />
@@ -73,6 +106,9 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <input
                 type="email"
                 id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 placeholder="you@example.com"
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
                 required
@@ -90,7 +126,10 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <input
                 type="text"
                 id="phoneNumber"
-                placeholder="***********"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+                placeholder="+2348119959625"
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               />
             </div>
@@ -103,6 +142,9 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               </label>
               <select
                 id="serviceRequired"
+                name="serviceRequired"
+                value={formData.serviceRequired}
+                onChange={handleInputChange}
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none dark:bg-[#1e232e]"
                 required
               >
@@ -124,6 +166,9 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </label>
             <textarea
               id="projectDetails"
+              name="projectDetails"
+              value={formData.projectDetails}
+              onChange={handleInputChange}
               placeholder="Tell us more about your idea"
               className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               required
@@ -132,6 +177,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <button
             type="submit"
             className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
+             disabled={isSubmitting || isSubmitted}
           >
             Submit message
           </button>
