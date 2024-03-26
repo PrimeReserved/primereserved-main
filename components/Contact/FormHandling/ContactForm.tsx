@@ -1,12 +1,14 @@
-"use client"
+"use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
-import useSubmitForm from '@/hooks/useSubmitForm'
+import useSubmitForm from "@/hooks/useSubmitForm";
 import IFormData from "@/interfaces/IFormData";
+import SuccessModal from "@/components/Modals/SuccessModal";
 
 const ContactForm: React.FC = () => {
-  const { handleSubmit, isSubmitting, isSubmitted, errorMessage } = useSubmitForm(`${process.env.NEXT_PUBLIC_CONTACT_API}`);
+  const { handleSubmit, isSubmitting, isSubmitted, errorMessage } =
+    useSubmitForm(`${process.env.NEXT_PUBLIC_CONTACT_API}`);
   const [formData, setFormData] = useState<IFormData>({
     fullName: "",
     companyName: "",
@@ -16,9 +18,10 @@ const ContactForm: React.FC = () => {
     projectDetails: "",
   });
 
-  // Define the type of the event parameter
   const handleInputChange = (
-    event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    event: ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
   ) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
@@ -203,6 +206,9 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
       </div>
+      {/* SuccessModal component */}
+      <SuccessModal isOpen={isSubmitted} onClose={() => {}} />{" "}
+      {/* Define onClose function as needed */}
     </section>
   );
 };
