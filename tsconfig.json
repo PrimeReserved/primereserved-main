@@ -23,6 +23,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/Contact/FormHandling",
+    "components/Contact/ContactFormPopup"
+  ],
   "exclude": ["node_modules"]
 }
