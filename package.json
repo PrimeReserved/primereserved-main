@@ -24,6 +24,7 @@
     "react-modal-video": "^2.0.0",
     "react-responsive": "^9.0.2",
     "react-slick": "^0.30.2",
+    "scheduler": "^0.23.0",
     "sharp": "^0.33.2",
     "slick-carousel": "^1.8.1"
   },
