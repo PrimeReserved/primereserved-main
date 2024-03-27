@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@mui/icons-material": "^5.15.12",
+    "cors": "^2.8.5",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "mongodb": "^6.5.0",
@@ -27,6 +28,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.33",
     "autoprefixer": "^10.4.16",
