@@ -3,9 +3,9 @@ import { useState } from "react";
 const useSubmitForm = (url) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = async (formData, setFormData, handleSuccess) => {
+  const handleSubmit = async (formData, setFormData,) => {
     setIsSubmitting(true);
     try {
       const response = await fetch(url, {
@@ -20,7 +20,6 @@ const useSubmitForm = (url) => {
       }
 
       const data = await response.json();
-      console.log("Form submission successful:", data);
       setFormData({
         // Optionally clear form after successful submission
         fullName: "",
@@ -31,19 +30,16 @@ const useSubmitForm = (url) => {
         projectDetails: "",
       });
       setIsSubmitted(true); // Update state to indicate form submission
-      handleSuccess(); // Call the success handler
+      // Call the success handler
     } catch (error) {
-      console.error("Error submitting form:", error);
-      // Handle errors gracefully, e.g., display an error message to the user
-      alert(
-        "There was a problem submitting your form. Please try again later.",
-      );
+      console.error(`Error submitting form: ${error}`);
+      setMessage(`Failed to submit form. Please try again later.`);
     } finally {
       setIsSubmitting(false); // Reset submitting state regardless of success or failure
     }
   };
 
-  return { handleSubmit, isSubmitting, isSubmitted, errorMessage };
+  return { handleSubmit, isSubmitting, isSubmitted, message, setIsSubmitted, setMessage };
 };
 
 export default useSubmitForm;
