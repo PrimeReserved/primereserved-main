@@ -49,7 +49,7 @@ const teamMembersData = [
     linkedIn: "https://www.linkedin.com/in/patcodes/",
     gmail: "patienceemaiku@gmail.com",
     description:
-      "Patience is a passionate frontend developer, currently crafting experiences at PrimeReserved.",
+      "She is a passionate frontend engineer with a strong skillset in building user interfaces, crafting responsive layouts, writing clean and maintainable code. She thrive in environments that allow her to leverage her creativity and problem-solving abilities to build user-friendly and engaging web experiences.",
   },
   {
     name: "Serina Wechie",
