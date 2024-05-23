@@ -28,13 +28,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-<<<<<<< HEAD
     "components/Contact/FormHandling",
     "components/Contact/ContactFormPopup"
   ],
-=======
-    "components/Contact/ContactForm"
-<<<<<<< HEAD
-, "components/Contact/FormHandling"  ],
   "exclude": ["node_modules"]
 }

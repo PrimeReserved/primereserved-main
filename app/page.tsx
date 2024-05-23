@@ -3,11 +3,7 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Services from "@/components/Services";
 import Hero from "@/components/Hero";
-<<<<<<< HEAD
 import ContactForm from "@/components/Contact/FormHandling/ContactForm";
-=======
-import ContactForm from "@/components/Contact/ContactForm/ContactForm";
->>>>>>> 38900fa (Feature/frontend UI update (#3))
 import { Metadata } from "next";
 import FAQs from "@/components/FAQs/FAQs";
 import ClientReviews from "@/components/ClientReviews/ClientReviews";
