@@ -34,7 +34,7 @@
   ],
 =======
     "components/Contact/ContactForm"
+<<<<<<< HEAD
 , "components/Contact/FormHandling"  ],
->>>>>>> f244f84 (feat: Implement API route for handling contact form submissions)
   "exclude": ["node_modules"]
 }
