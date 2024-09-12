@@ -7,8 +7,9 @@ import IFormData from "@/interfaces/IFormData";
 import SuccessModal from "@/components/Modals/SuccessModal";
 
 const ContactForm: React.FC = () => {
-  const { handleSubmit, isSubmitting, isSubmitted, errorMessage } =
+  const { handleSubmit, isSubmitting, isSubmitted, setIsSubmitted, message, setMessage } =
     useSubmitForm(`${process.env.NEXT_PUBLIC_CONTACT_API}`);
+
   const [formData, setFormData] = useState<IFormData>({
     fullName: "",
     companyName: "",
@@ -18,6 +19,12 @@ const ContactForm: React.FC = () => {
     projectDetails: "",
   });
 
+  // Function to close the modal
+  const handleCloseModal = () => {
+    setIsSubmitted(false)
+  };
+
+  // Handle input change
   const handleInputChange = (
     event: ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -30,6 +37,14 @@ const ContactForm: React.FC = () => {
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     handleSubmit(formData, setFormData);
+    setIsSubmitted(true);
+    setMessage("your form has been successfully submitted");
+  };
+
+  // Error message
+  const handleError = (error) => {
+    setIsSubmitted(true);
+    setMessage(`Error: ${error}`);
   };
 
   return (
@@ -72,7 +87,7 @@ const ContactForm: React.FC = () => {
                   <div>
                     <p className="mb-1 text-lg font-bold">E-mail:</p>
                     <p className="mb-2 text-xs sm:text-sm md:text-lg">
-                      primereserveteam@gmail.com
+                      {process.env.NEXT_PUBLIC_EMAIL}
                     </p>
                   </div>
                 </div>
@@ -207,7 +222,7 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
       {/* SuccessModal component */}
-      <SuccessModal isOpen={isSubmitted} onClose={() => {}} />{" "}
+      <SuccessModal isOpen={isSubmitted} onClose={handleCloseModal} message={message} />{" "}
       {/* Define onClose function as needed */}
     </section>
   );
