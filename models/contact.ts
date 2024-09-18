@@ -18,4 +18,4 @@ export const ContactSchema = new Schema<IContact>({
     projectDetails: String,
 })
 
-export default models?.Contact || model<IContact>("Contact", ContactSchema);
+export const Contact = models?.Contact || model<IContact>("Contact", ContactSchema);

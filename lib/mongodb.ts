@@ -11,7 +11,7 @@ export const dbConnect = async () => {
   }
   try {
     const client = await connect(`${process.env.NEXT_PUBLIC_MONGO_URI}`);
-    console.log("db new");
+    console.log("connected to Database.");
     console.log("Mongodb Connection Established!", client.STATES);
     cachedDb = client;
     return client;

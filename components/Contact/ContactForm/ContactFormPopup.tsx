@@ -1,48 +1,27 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from "react";
+
 import { FiPhone, FiMail, FiX } from "react-icons/fi";
-import useSubmitForm from "@/hooks/useSubmitForm";
-import IFormData from "@/interfaces/IFormData";
-import SuccessModal from "@/components/Modals/SuccessModal";
+
+import { addContact } from "@/lib/action"
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { useState } from "react";
+
 
 const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  const { handleSubmit, isSubmitting, isSubmitted, errorMessage } =
-    useSubmitForm(`${process.env.NEXT_PUBLIC_CONTACT_API}`);
-  const [formData, setFormData] = useState<IFormData>({
-    fullName: "",
-    companyName: "",
-    email: "",
-    phoneNumber: "",
-    serviceRequired: "",
-    projectDetails: "",
-  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // State variables to control the visibility of the success modal
-  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-
-  const handleInputChange = (
-    event: ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >,
-  ) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    handleSubmit(formData, setFormData, handleSuccess); // Pass handleSuccess function to the handleSubmit function
-  };
 
-  // Define handleSuccess function to open the success modal
-  const handleSuccess = () => {
-    setIsSuccessModalOpen(true);
-  };
+    const formData = new FormData(event.currentTarget);
 
-  // Define handleCloseSuccessModal function to close the success modal
-  const handleCloseSuccessModal = () => {
-    setIsSuccessModalOpen(false);
-    onClose(); // Close the form popup after closing the success modal
+    const response = await addContact(formData);
+    if (response.success === true) {
+      Notify.success('Success message');
+      setIsSubmitted(true);
+    } else {
+      Notify.failure(`Failure message: ${response.error}`);
+    }
   };
 
   return (
@@ -81,7 +60,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
           </div>
         </div>
-        <form className="mt-8 space-y-4 pb-20" onSubmit={handleFormSubmit}>
+        <form className="mt-8 space-y-4 pb-20" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="fullName" className="text-md mb-2 block font-bold">
               Full Name
@@ -90,8 +69,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               type="text"
               id="fullName"
               name="fullName"
-              value={formData.fullName}
-              onChange={handleInputChange}
               placeholder="Jane Cooper"
               className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               required
@@ -109,8 +86,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 type="text"
                 id="companyName"
                 name="companyName"
-                value={formData.companyName}
-                onChange={handleInputChange}
                 placeholder="Ex. Tesla Inc"
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               />
@@ -123,8 +98,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleInputChange}
                 placeholder="you@example.com"
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
                 required
@@ -143,8 +116,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 type="text"
                 id="phoneNumber"
                 name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleInputChange}
                 placeholder="+2348119959625"
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               />
@@ -159,8 +130,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <select
                 id="serviceRequired"
                 name="serviceRequired"
-                value={formData.serviceRequired}
-                onChange={handleInputChange}
                 className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none dark:bg-[#1e232e]"
                 required
               >
@@ -183,8 +152,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <textarea
               id="projectDetails"
               name="projectDetails"
-              value={formData.projectDetails}
-              onChange={handleInputChange}
               placeholder="Tell us more about your idea"
               className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
               required
@@ -192,18 +159,13 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
           <button
             type="submit"
-            className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out hover:bg-primary/80"
-            disabled={isSubmitting || isSubmitted}
+            className={`inline-flex items-center justify-center rounded-xl border border-transparent ${isSubmitted ? 'bg-gray-500' : 'bg-primary'} px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out ${isSubmitted ? 'hover:bg-customSecondary/80' : 'hover:bg-primary/80'}`}
+            disabled={isSubmitted}
           >
             Submit message
           </button>
         </form>
       </div>
-      {/* SuccessModal component */}
-      <SuccessModal
-        isOpen={isSuccessModalOpen}
-        onClose={handleCloseSuccessModal}
-      />
     </div>
   );
 };
