@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
 import { addContact } from "@/lib/action";
-import { Notify } from "notiflix/build/notiflix-notify-aio";
+// import { Notify } from "notiflix/build/notiflix-notify-aio";
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,11 +19,12 @@ const ContactForm: React.FC = () => {
     const response = await addContact(formData);
     setIsSubmitting(false);
 
+    console.log(response);
     if (response.success === true) {
-      Notify.success("Success message");
+      Report.success("Success message", "Contact message sent!", "Close");
       setIsSubmitted(true);
     } else {
-      Notify.failure(`Failure message: ${response.error}`);
+      Report.failure("Failure message", `Oh no!, Please try again`, 'Close');
     }
   };
 
