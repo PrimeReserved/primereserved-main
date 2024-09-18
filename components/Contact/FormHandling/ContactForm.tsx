@@ -155,7 +155,7 @@ const ContactForm: React.FC = () => {
                         <option value="">Select Your Service</option>
                         <option value="Web Design">Web Design</option>
                         <option value="Web Development">Web Development</option>
-                        <option value="Web Development">Secure Sofware Development</option>
+                        <option value="Web Development">Secure Software Development</option>
                         <option value="Web Development">Software Architecture</option>
                         <option value="Mobile Development">
                           Mobile Development
