@@ -150,7 +150,7 @@ const ContactForm: React.FC = () => {
                       <select
                         id="serviceRequired"
                         name="serviceRequired"
-                        className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                        className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none dark:bg-customDarkBg"
                         required
                       >
                         <option value="">Select Your Service</option>
