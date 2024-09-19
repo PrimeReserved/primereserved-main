@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
 import { addContact } from "@/lib/action";
 // import { Notify } from "notiflix/build/notiflix-notify-aio";
-import { Report } from 'notiflix/build/notiflix-report-aio';
+import { Report } from "notiflix/build/notiflix-report-aio";
 
 const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,13 +24,14 @@ const ContactForm: React.FC = () => {
       Report.success("Success message", "Contact message sent!", "Close");
       setIsSubmitted(true);
     } else {
-      Report.failure("Failure message", `Oh no!, Please try again`, 'Close');
+      Report.failure("Failure message", `Oh no!, Please try again`, "Close");
     }
   };
 
   return (
     <section
-      className="wow fadeInUp relative z-10 w-full bg-customBg"
+      className="wow fadeInUp relative z-10 w-full bg-customBg dark:bg-customDarkBg"
+      id="contact-section"
       data-wow-delay=".1s"
     >
       <div className="container mx-auto px-4 py-8">
@@ -155,8 +156,12 @@ const ContactForm: React.FC = () => {
                         <option value="">Select Your Service</option>
                         <option value="Web Design">Web Design</option>
                         <option value="Web Development">Web Development</option>
-                        <option value="Web Development">Secure Software Development</option>
-                        <option value="Web Development">Software Architecture</option>
+                        <option value="Web Development">
+                          Secure Software Development
+                        </option>
+                        <option value="Web Development">
+                          Software Architecture
+                        </option>
                         <option value="Mobile Development">
                           Mobile Development
                         </option>
@@ -187,17 +192,15 @@ const ContactForm: React.FC = () => {
                     className={`inline-flex items-center justify-center rounded-xl border border-transparent ${
                       isSubmitting ? "bg-gray-500" : "bg-primary"
                     } px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out ${
-                      isSubmitting
-                        ? "hover:bg-gray-500"
-                        : "hover:bg-primary/80"
+                      isSubmitting ? "hover:bg-gray-500" : "hover:bg-primary/80"
                     }`}
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center space-x-2">
-                        <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse"></div>
-                        <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse"></div>
-                        <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse"></div>
+                        <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
+                        <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
+                        <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
                       </div>
                     ) : (
                       <span>Submit message</span>
