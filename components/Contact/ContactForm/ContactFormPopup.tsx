@@ -6,7 +6,7 @@ import IFormData from "@/interfaces/IFormData";
 import SuccessModal from "@/components/Modals/SuccessModal";
 
 const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  const { handleSubmit, isSubmitting, isSubmitted, errorMessage } =
+  const { handleSubmit, isSubmitting, isSubmitted, setIsSubmitted, message, setMessage } =
     useSubmitForm(`${process.env.NEXT_PUBLIC_CONTACT_API}`);
   const [formData, setFormData] = useState<IFormData>({
     fullName: "",
@@ -17,8 +17,11 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     projectDetails: "",
   });
 
-  // State variables to control the visibility of the success modal
-  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+  // Function to close the modal
+  const handleCloseModal = () => {
+    setIsSubmitted(false)
+  };
+
 
   const handleInputChange = (
     event: ChangeEvent<
@@ -31,18 +34,15 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    handleSubmit(formData, setFormData, handleSuccess); // Pass handleSuccess function to the handleSubmit function
+    handleSubmit(formData, setFormData);
+    setIsSubmitted(true);
+    setMessage("your form has been successfully submitted"); 
   };
 
-  // Define handleSuccess function to open the success modal
-  const handleSuccess = () => {
-    setIsSuccessModalOpen(true);
-  };
-
-  // Define handleCloseSuccessModal function to close the success modal
-  const handleCloseSuccessModal = () => {
-    setIsSuccessModalOpen(false);
-    onClose(); // Close the form popup after closing the success modal
+  // Error message
+  const handleError = (error) => {
+    setIsSubmitted(true);
+    setMessage(`Error: ${error}`);
   };
 
   return (
@@ -77,7 +77,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div>
               <p className="text-md mb-1 font-bold">E-mail:</p>
-              <p className="text-sm">primereserveteam@gmail.com</p>
+              <p className="text-sm">{process.env.NEXT_PUBLIC_EMAIL}</p>
             </div>
           </div>
         </div>
@@ -200,10 +200,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </form>
       </div>
       {/* SuccessModal component */}
-      <SuccessModal
-        isOpen={isSuccessModalOpen}
-        onClose={handleCloseSuccessModal}
-      />
+      <SuccessModal isOpen={isSubmitted} onClose={handleCloseModal} message={message} />
     </div>
   );
 };
