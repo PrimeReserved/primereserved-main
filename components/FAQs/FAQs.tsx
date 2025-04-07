@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import QuestionComponent from "./QuestionComponent";
 import AnswerComponent from "./AnswerComponent";
+import SupportMessage from "@/components/Cards/SupportMessage";
 
 const FAQs: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean[]>([
+    false,
     false,
     false,
     false,
@@ -93,6 +95,17 @@ const FAQs: React.FC = () => {
                 answer="Let's answer this one with a question: 'How would you like to be at a place where the prime and uniquely excellent things are reserved for you always?' Yeah? That's what we thought! :) Here at PrimeReserved, your satisfaction is our prime reserve. Get in contact with us. We'd love to hear from you!"
                 isOpen={isOpen[4]}
               />
+
+              <QuestionComponent
+                question="How soon can I expect my project to be completed?"
+                isOpen={isOpen[5]}
+                onClick={() => toggleFAQ(5)}
+              />
+              <AnswerComponent
+                answer="It depends on the size and scope of your project—some take a few weeks, others a couple of months. Once you complete our project form, we’ll review the details and share a clear timeline so you know exactly what to expect."
+                isOpen={isOpen[5]}
+              />
+              <SupportMessage />
             </div>
           </div>
         </div>

@@ -1,31 +1,41 @@
 "use client";
 
 import { FiPhone, FiMail, FiX } from "react-icons/fi";
-
-import { addContact } from "@/lib/action"
+import { addContact } from "@/lib/action";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useState } from "react";
 
-
 const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsSubmitting(true);
 
     const formData = new FormData(event.currentTarget);
 
-    const response = await addContact(formData);
-    if (response.success === true) {
-      Notify.success('Success message');
-      setIsSubmitted(true);
-    } else {
-      Notify.failure(`Failure message: ${response.error}`);
+    try {
+      const response = await addContact(formData);
+      
+      if (response.success === true) {
+        Notify.success('Contact message sent!');
+        setIsSubmitted(true);
+      } else {
+        // Use message instead of error based on your server action structure
+        Notify.failure(`Failed to send message: ${response.message || 'Please try again'}`);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      Notify.failure('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="fixed left-0 top-20 z-50 flex h-screen w-full items-center justify-center backdrop-blur-md">
+    <div className="fixed left-0 top-0 z-1000 flex h-screen w-full items-center justify-center backdrop-blur-md">
+
       <div className="h-screen w-11/12 max-w-lg overflow-auto rounded-lg bg-white p-8 text-black shadow-lg dark:bg-[#1e232e] dark:text-white">
         <button
           className="absolute right-4 top-4 rounded-full bg-gray-100 p-4 text-lg text-gray-800 focus:outline-none"
@@ -47,7 +57,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <div>
               <p className="text-md mb-1 font-bold">Phone:</p>
               <p className="mb-2 text-sm">+234 (0) 706 5682 515</p>
-              <p className="mb-2 text-sm">+234 (0) 810 3155 891</p>
+              <p className="mb-2 text-sm">+234 (0) 704 7390 068</p>
             </div>
           </div>
           <div className="flex-1">
@@ -61,109 +71,128 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
         </div>
         <form className="mt-8 space-y-4 pb-20" onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label htmlFor="fullName" className="text-md mb-2 block font-bold">
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              placeholder="Jane Cooper"
-              className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-              required
-            />
-          </div>
-          <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div>
-              <label
-                htmlFor="companyName"
-                className="text-md mb-2 block font-bold"
-              >
-                Company Name
-              </label>
-              <input
-                type="text"
-                id="companyName"
-                name="companyName"
-                placeholder="Ex. Tesla Inc"
-                className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-              />
+          {isSubmitted ? (
+            <div className="text-primary">
+              Thank you for your submission!
             </div>
-            <div>
-              <label htmlFor="email" className="text-md mb-2 block font-bold">
-                E-mail*
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-                required
-              />
-            </div>
-          </div>
-          <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div>
-              <label
-                htmlFor="phoneNumber"
-                className="text-md mb-2 block font-bold"
+          ) : (
+            <>
+              <div className="mb-6">
+                <label htmlFor="fullName" className="text-md mb-2 block font-bold">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Jane Cooper"
+                  className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                  required
+                />
+              </div>
+              <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="companyName"
+                    className="text-md mb-2 block font-bold"
+                  >
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    id="companyName"
+                    name="companyName"
+                    placeholder="Ex. Tesla Inc"
+                    className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="text-md mb-2 block font-bold">
+                    E-mail*
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="phoneNumber"
+                    className="text-md mb-2 block font-bold"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="+2348119959625"
+                    className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="serviceRequired"
+                    className="text-md mb-2 block font-bold"
+                  >
+                    Service Required
+                  </label>
+                  <select
+                    id="serviceRequired"
+                    name="serviceRequired"
+                    className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none dark:bg-[#1e232e]"
+                    required
+                  >
+                    <option value="">Select Your Service</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Team Training">Team Training</option>
+                    <option value="Web Content Strategy">Web Content Strategy</option>
+                  </select>
+                </div>
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="projectDetails"
+                  className="text-md mb-2 block font-bold"
+                >
+                  Project Details*
+                </label>
+                <textarea
+                  id="projectDetails"
+                  name="projectDetails"
+                  placeholder="Tell us more about your idea"
+                  className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className={`inline-flex items-center justify-center rounded-xl border border-transparent ${
+                  isSubmitting ? "bg-gray-500" : "bg-primary"
+                } px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out ${
+                  isSubmitting ? "hover:bg-gray-500" : "hover:bg-primary/80"
+                }`}
+                disabled={isSubmitting}
               >
-                Phone Number
-              </label>
-              <input
-                type="text"
-                id="phoneNumber"
-                name="phoneNumber"
-                placeholder="+2348119959625"
-                className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="serviceRequired"
-                className="text-md mb-2 block font-bold"
-              >
-                Service Required
-              </label>
-              <select
-                id="serviceRequired"
-                name="serviceRequired"
-                className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none dark:bg-[#1e232e]"
-                required
-              >
-                <option value="">Select Your Service</option>
-                <option value="Web Design">Web Design</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Mobile Development">Mobile Development</option>
-                <option value="Technical Support">Technical Support</option>
-                <option value="Security Audits">Security Audits</option>
-              </select>
-            </div>
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="projectDetails"
-              className="text-md mb-2 block font-bold"
-            >
-              Project Details*
-            </label>
-            <textarea
-              id="projectDetails"
-              name="projectDetails"
-              placeholder="Tell us more about your idea"
-              className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className={`inline-flex items-center justify-center rounded-xl border border-transparent ${isSubmitted ? 'bg-gray-500' : 'bg-primary'} px-[3.5rem] py-5 text-sm text-white duration-300 ease-in-out ${isSubmitted ? 'hover:bg-customSecondary/80' : 'hover:bg-primary/80'}`}
-            disabled={isSubmitted}
-          >
-            Submit message
-          </button>
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
+                    <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
+                    <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
+                  </div>
+                ) : (
+                  <span>Submit message</span>
+                )}
+              </button>
+            </>
+          )}
         </form>
       </div>
     </div>

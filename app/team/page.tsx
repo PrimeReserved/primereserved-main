@@ -69,21 +69,20 @@ const TeamPage = () => {
       <div className="relative z-10 overflow-hidden pt-20 lg:pt-[90px]"></div>
       <TeamHero />
       {/* Leadership */}
-      <TeamMembers
+      
+      {/* <TeamMembers
         // backgroundImage="/background.jpg"
         // backgroundColor="#f5f5f5"
         heading="We are PrimeReserved"
         paragraph="We are prime creators with a reserved passion for exceptionalism and outstanding excellence."
         members={teamData}
-      />
+      /> */}
       {/* Team Members */}
-      <div className="mt-[-5rem]">
+      {/* <div className="mt-[-5rem]">
         <TeamMembers
-          // heading="We are PrimeReserved"
-          // paragraph="We are prime creators with a reserved passion for exceptionalism and outstanding excellence."
           members={teamMembersData}
         />
-      </div>
+      </div> */}
 
       <div className="container mx-auto block py-8 dark:hidden">
         <ImageAndTextJustForTeam

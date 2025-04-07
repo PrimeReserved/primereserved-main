@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
                   <div>
                     <p className="mb-1 text-lg font-bold">Phone:</p>
                     <p className="mb-2">+234 (0) 706 5682 515</p>
-                    <p className="mb-2">+234 (0) 810 3155 891</p>
+                    <p className="mb-2">+234 (0) 704 7390 068</p>
                   </div>
                 </div>
               </div>
@@ -156,19 +156,10 @@ const ContactForm: React.FC = () => {
                         <option value="">Select Your Service</option>
                         <option value="Web Design">Web Design</option>
                         <option value="Web Development">Web Development</option>
-                        <option value="Web Development">
-                          Secure Software Development
+                        <option value="Team Training">
+                          Team Training
                         </option>
-                        <option value="Web Development">
-                          Software Architecture
-                        </option>
-                        <option value="Mobile Development">
-                          Mobile Development
-                        </option>
-                        <option value="Technical Support">
-                          Technical Support
-                        </option>
-                        <option value="Security Audits">Security Audits</option>
+                        <option value="Web Content Strategy">Web Content Strategy</option>
                       </select>
                     </div>
                   </div>

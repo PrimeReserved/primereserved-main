@@ -7,7 +7,7 @@ const ServicesHero: React.FC = () => {
     <div
       className="relative flex h-96 items-center justify-center bg-cover bg-center px-4"
       style={{
-        backgroundImage: "url('/images/services-images/herodesktopEdit.png')",
+        backgroundImage: "url('https://res.cloudinary.com/dzd51q99i/image/upload/f_auto,q_auto,w_1920/v1744047541/herodesktopEdit_b9bfi2.png')",
       }}
     >
       {/* Background Image Overlay */}

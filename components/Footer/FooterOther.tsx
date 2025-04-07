@@ -50,16 +50,6 @@ const FooterHome = () => {
                   image="/images/icons/youtube-logo.svg"
                   alt="Youtube"
                 />
-                <SocialLink
-                  href="https://www.instagram.com/primereservedtech"
-                  image="/images/icons/ig-logo.svg"
-                  alt="Instagram"
-                />
-                <SocialLink
-                  href="https://www.facebook.com/groups/1554028415142497/"
-                  image="/images/icons/fb-logo.svg"
-                  alt="Facebook"
-                />
               </div>
             </div>
           </div>
@@ -82,16 +72,6 @@ const FooterHome = () => {
             href="https://www.youtube.com/@primereservedtech"
             image="/images/icons/youtube-logo.svg"
             alt="Youtube"
-          />
-          <SocialLink
-            href="https://www.instagram.com/primereservedtech"
-            image="/images/icons/ig-logo.svg"
-            alt="Instagram"
-          />
-          <SocialLink
-            href="https://www.facebook.com/groups/1554028415142497/"
-            image="/images/icons/fb-logo.svg"
-            alt="Facebook"
           />
         </div>
         <hr className="h-px w-full bg-[#D2D8E183]" />
@@ -153,7 +133,7 @@ const QuickLinks = () => (
           href="/team"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
-          Meet the team
+          The team
         </Link>
       </li>
       <li>
@@ -192,10 +172,10 @@ const Services = () => (
       </li>
       <li>
         <Link
-          href="/services#mobileDevelopment"
+          href="/services#webContentStrategy"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
-          Mobile Development
+          Web Content Strategy
         </Link>
       </li>
       <li>
@@ -206,22 +186,6 @@ const Services = () => (
           Team Training
         </Link>
       </li>
-      <li>
-        <Link
-          href="/services#securityAudits"
-          className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
-        >
-          Security Audits
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/services#technicalSupport"
-          className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
-        >
-          Technical Support
-        </Link>
-      </li>
     </ul>
   </div>
 );
@@ -229,7 +193,8 @@ const Services = () => (
 const Copyright = () => (
   <div className="items-center justify-between py-8 font-light md:flex">
     <p className="text-center text-base text-white dark:text-white">
-      Copyright © 2024 PrimeReserved. All rights reserved
+    Copyright © {new Date().getFullYear()} PrimeReserved. All rights reserved
+
     </p>
     <div className="flex items-center justify-center gap-8">
       <Link href="/terms" className="text-base text-white dark:text-white">

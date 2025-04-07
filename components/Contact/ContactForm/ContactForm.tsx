@@ -29,7 +29,7 @@ const ContactForm = () => {
                       +234 (0) 706 5682 515
                     </p>
                     <p className="mb-2 text-xs sm:text-sm md:text-lg">
-                      +234 (0) 810 3155 891
+                      +234 (0) 704 7390 068
                     </p>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ const Services: React.FC = () => {
             We Are Specialized In The Following
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {servicesData.map((service, index) => (
             <ServiceBox key={index} {...service} isFirst={index === 0} />
           ))}
@@ -81,27 +81,15 @@ const servicesData: ServiceBoxProps[] = [
     isFirst: false,
   },
   {
-    title: "Technical Support",
-    description:
-      "We provide technical support to individuals, businesses, and teams of different sizes. Reach out to us today if you or your team needs support.",
-    isFirst: false,
-  },
-  {
-    title: "Mobile Applications",
-    description:
-      "From idea to code, and beyond, our software team delivers user-centric state-of-the-art cutting-edge applications that are loved by your users.",
-    isFirst: false,
-  },
-  {
     title: "Team Training",
     description:
       "Anything worth doing is worth training for. Do you have a team that requires training in any of the services we offer? Reach out to us today!",
     isFirst: false,
   },
   {
-    title: "Security Audits",
+    title: "Web Content Strategy",
     description:
-      "Great products and solutions only have great worth when they are all-round reliable. Our team prioritizes not just building but also securing.",
+      "We craft high-performing web content that speaks to your audience and search engines. From messaging to metadata, every word is optimized to boost visibility, drive traffic, and turn clicks into customers organically.",
     isFirst: false,
   },
 ];
