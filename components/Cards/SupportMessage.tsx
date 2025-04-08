@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ContactFormPopup from "../Contact/ContactForm/ContactFormPopup";
+import ContactFormPopupFAQ from "../Contact/ContactForm/ContactFormPopupFAQ";
 
 interface SupportMessageProps {
   heading?: string;
@@ -48,9 +48,9 @@ const SupportMessage: React.FC<SupportMessageProps> = ({
 
   return (
     <>
-      <div className="w-full mx-auto p-8 rounded-lg shadow-lg bg-white">
-        <h2 className="text-2xl font-medium text-gray-800">{heading}</h2>
-        <p className="text-gray-400">
+      <div className="w-full mx-auto p-6 rounded-lg shadow-lg bg-white">
+        <h2 className="text-lg md:text-xl font-medium text-gray-800">{heading}</h2>
+        <p className="text-gray-400 text-sm md:text-md">
           {message}{" "}
           <button 
             onClick={handleOpenPopup}
@@ -59,7 +59,7 @@ const SupportMessage: React.FC<SupportMessageProps> = ({
           >
             {contactText}
           </button>
-          {" "}and we will help you as soon as possible.
+          {" "}and we will get back to you shortly.
         </p>
       </div>
 
@@ -73,7 +73,7 @@ const SupportMessage: React.FC<SupportMessageProps> = ({
             >
               ✕
             </button>
-            <ContactFormPopup onClose={handleClosePopup} />
+            <ContactFormPopupFAQ onClose={handleClosePopup} />
           </div>
         </div>
       )}

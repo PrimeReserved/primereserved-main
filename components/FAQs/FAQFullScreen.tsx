@@ -27,7 +27,7 @@ const FAQFullScreen: React.FC = () => {
         <div className="flex flex-col items-center gap-4 xs:py-4 md:py-8">
           {/* <p className="text-lg font-bold text-primary">FAQFullScreen</p> */}
           <h1 className="text-center text-3xl font-bold">
-            You Have Questions We Have Answers
+            Got Questions? We've Got Answers
           </h1>
         </div>
         <div className="mt-8 flex w-full flex-col items-center justify-center md:flex-row">

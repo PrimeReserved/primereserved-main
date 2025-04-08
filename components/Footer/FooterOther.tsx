@@ -7,7 +7,7 @@ import BtnArrowIcon from "../Buttons/BtnArrowIcon";
 
 const FooterHome = () => {
   return (
-    <footer className="relative z-10 bg-customSecondary pt-16 dark:bg-customDarkBg md:pt-20 lg:pt-24">
+    <footer className="relative bg-customSecondary pt-16 dark:bg-customDarkBg md:pt-20 lg:pt-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 md:w-1/2 lg:w-6/12 xl:w-6/12">

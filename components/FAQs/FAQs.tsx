@@ -32,7 +32,7 @@ const FAQs: React.FC = () => {
           <div className="flex flex-col items-center gap-4 md:py-8">
             <p className="py-2 text-lg font-bold text-primary">FAQs</p>
             <h1 className="py-2 text-center text-3xl font-bold">
-              You Have Questions We Have Answers
+              Got Questions? We've Got Answers
             </h1>
           </div>
           <div className="mt-8 flex flex-col md:flex-row md:items-start md:justify-between md:pt-24">

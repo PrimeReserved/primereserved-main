@@ -69,7 +69,7 @@ const TeamPage = () => {
       <div className="relative z-10 overflow-hidden pt-20 lg:pt-[90px]"></div>
       <TeamHero />
       {/* Leadership */}
-      
+
       {/* <TeamMembers
         // backgroundImage="/background.jpg"
         // backgroundColor="#f5f5f5"
@@ -99,7 +99,9 @@ const TeamPage = () => {
           paragraph="Reach out to us today and be a part of our journey toward a brighter tomorrow."
         />
       </div>
-      <ContactForm />
+      <div id="contactUs">
+        <ContactForm />
+      </div>
     </>
   );
 };

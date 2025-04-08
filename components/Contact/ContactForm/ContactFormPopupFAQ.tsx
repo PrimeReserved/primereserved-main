@@ -5,7 +5,7 @@ import { addContact } from "@/lib/action";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useState } from "react";
 
-const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+const ContactFormPopupFAQ: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -46,7 +46,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         <section>
           <p className="text-md font-bold text-primary">CONTACT US</p>
           <h1 className="text-md font-bold md:text-2xl">
-            Have A Project Idea?
+            Got an Inquiry?
           </h1>
         </section>
         <div className="mt-8 flex flex-col md:flex-row md:items-start md:justify-between">
@@ -90,22 +90,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                   required
                 />
               </div>
-              <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="companyName"
-                    className="text-md mb-2 block font-bold"
-                  >
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="companyName"
-                    name="companyName"
-                    placeholder="Ex. Tesla Inc"
-                    className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-                  />
-                </div>
+              <div className="mb-6">
                 <div>
                   <label htmlFor="email" className="text-md mb-2 block font-bold">
                     E-mail*
@@ -120,28 +105,13 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                   />
                 </div>
               </div>
-              <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="phoneNumber"
-                    className="text-md mb-2 block font-bold"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    placeholder="+2348119959625"
-                    className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
-                  />
-                </div>
+              <div className="mb-6">
                 <div>
                   <label
                     htmlFor="serviceRequired"
                     className="text-md mb-2 block font-bold"
                   >
-                    Service Required
+                    Service Inquiry*
                   </label>
                   <select
                     id="serviceRequired"
@@ -154,6 +124,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <option value="Web Development">Web Development</option>
                     <option value="Team Training">Team Training</option>
                     <option value="Web Content Strategy">Web Content Strategy</option>
+                    <option value="Web Content Strategy">Other</option>
                   </select>
                 </div>
               </div>
@@ -162,12 +133,12 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                   htmlFor="projectDetails"
                   className="text-md mb-2 block font-bold"
                 >
-                  Project Details*
+                  Ask Us Anything*
                 </label>
                 <textarea
                   id="projectDetails"
                   name="projectDetails"
-                  placeholder="Tell us more about your idea"
+                  placeholder="We will provide the answers you need."
                   className="my-2 w-full border-b-2 border-gray-500 bg-transparent pb-2 text-xl focus:outline-none"
                   required
                 ></textarea>
@@ -188,7 +159,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-white"></div>
                   </div>
                 ) : (
-                  <span>Submit message</span>
+                  <span>Submit Inquiry</span>
                 )}
               </button>
             </>
@@ -199,4 +170,4 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   );
 };
 
-export default ContactFormPopup;
+export default ContactFormPopupFAQ;
