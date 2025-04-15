@@ -51,8 +51,7 @@ const ContactForm: React.FC = () => {
                   </div>
                   <div>
                     <p className="mb-1 text-lg font-bold">Phone:</p>
-                    <p className="mb-2">+234 (0) 706 5682 515</p>
-                    <p className="mb-2">+234 (0) 704 7390 068</p>
+                    <p className="mb-2">+234 (0) 704 6495 265</p>
                   </div>
                 </div>
               </div>
@@ -156,10 +155,10 @@ const ContactForm: React.FC = () => {
                         <option value="">Select Your Service</option>
                         <option value="Web Design">Web Design</option>
                         <option value="Web Development">Web Development</option>
-                        <option value="Team Training">
-                          Team Training
+                        <option value="Team Training">Team Training</option>
+                        <option value="Web Content Strategy">
+                          Web Content Strategy
                         </option>
-                        <option value="Web Content Strategy">Web Content Strategy</option>
                       </select>
                     </div>
                   </div>

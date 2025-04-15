@@ -2,7 +2,7 @@
 
 import { FiPhone, FiMail, FiX } from "react-icons/fi";
 import { addContact } from "@/lib/action";
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 import { useState } from "react";
 
 const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -17,17 +17,19 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     try {
       const response = await addContact(formData);
-      
+
       if (response.success === true) {
-        Notify.success('Contact message sent!');
+        Notify.success("Contact message sent!");
         setIsSubmitted(true);
       } else {
         // Use message instead of error based on your server action structure
-        Notify.failure(`Failed to send message: ${response.message || 'Please try again'}`);
+        Notify.failure(
+          `Failed to send message: ${response.message || "Please try again"}`,
+        );
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      Notify.failure('Something went wrong. Please try again.');
+      Notify.failure("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -35,7 +37,6 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center backdrop-blur-md">
-
       <div className="h-screen w-11/12 max-w-lg overflow-auto rounded-lg bg-white p-8 text-black shadow-lg dark:bg-[#1e232e] dark:text-white">
         <button
           className="absolute right-4 top-4 rounded-full bg-gray-100 p-4 text-lg text-gray-800 focus:outline-none"
@@ -56,8 +57,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div>
               <p className="text-md mb-1 font-bold">Phone:</p>
-              <p className="mb-2 text-sm">+234 (0) 706 5682 515</p>
-              <p className="mb-2 text-sm">+234 (0) 704 7390 068</p>
+              <p className="mb-2 text-sm">+234 (0) 704 6495 265</p>
             </div>
           </div>
           <div className="flex-1">
@@ -72,13 +72,14 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
         <form className="mt-8 space-y-4 pb-20" onSubmit={handleSubmit}>
           {isSubmitted ? (
-            <div className="text-primary">
-              Thank you for your submission!
-            </div>
+            <div className="text-primary">Thank you for your submission!</div>
           ) : (
             <>
               <div className="mb-6">
-                <label htmlFor="fullName" className="text-md mb-2 block font-bold">
+                <label
+                  htmlFor="fullName"
+                  className="text-md mb-2 block font-bold"
+                >
                   Full Name
                 </label>
                 <input
@@ -107,7 +108,10 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-md mb-2 block font-bold">
+                  <label
+                    htmlFor="email"
+                    className="text-md mb-2 block font-bold"
+                  >
                     E-mail*
                   </label>
                   <input
@@ -153,7 +157,9 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <option value="Web Design">Web Design</option>
                     <option value="Web Development">Web Development</option>
                     <option value="Team Training">Team Training</option>
-                    <option value="Web Content Strategy">Web Content Strategy</option>
+                    <option value="Web Content Strategy">
+                      Web Content Strategy
+                    </option>
                   </select>
                 </div>
               </div>
