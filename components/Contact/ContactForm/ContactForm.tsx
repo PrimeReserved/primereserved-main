@@ -26,7 +26,7 @@ const ContactForm = () => {
                   <div>
                     <p className="mb-1 text-lg font-bold">Phone:</p>
                     <p className="mb-2 text-xs sm:text-sm md:text-lg">
-                      +234 (0) 704 6495 265
+                      +234 (0) 706 5682 515
                     </p>
                   </div>
                 </div>

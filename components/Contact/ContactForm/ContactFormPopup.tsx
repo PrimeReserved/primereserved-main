@@ -57,7 +57,7 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div>
               <p className="text-md mb-1 font-bold">Phone:</p>
-              <p className="mb-2 text-sm">+234 (0) 704 6495 265</p>
+              <p className="mb-2 text-sm">+234 (0) 706 5682 515</p>
             </div>
           </div>
           <div className="flex-1">

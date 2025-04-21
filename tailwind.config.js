@@ -81,6 +81,16 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      keyframes: {
+        underlineSlide: {
+          "0%": { transform: "scaleX(0)", height: "6px", opacity: "0" },
+          "50%": { transform: "scaleX(1.05)", height: "4px", opacity: "1" },
+          "100%": { transform: "scaleX(1)", height: "3px", opacity: "1" },
+        },
+      },
+      animation: {
+        underlineSlide: "underlineSlide 1.5s ease-in-out forwards",
+      },
     },
   },
   plugins: [],

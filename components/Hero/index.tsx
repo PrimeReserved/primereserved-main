@@ -1,51 +1,93 @@
-import React from "react";
-import { BiRocket } from "react-icons/bi";
-import Image from "next/image";
-
-const DynamicScrollToContactButton = React.lazy(
-  () => import("../Buttons/ScrollToContactButton"),
-);
+"use client";
+import React, { useEffect, useRef } from "react";
+import IconButton from "../Buttons/IconButton";
+import BtnArrowIcon from "../Buttons/BtnArrowIcon";
 
 const Hero: React.FC = () => {
+  const underline1Ref = useRef<HTMLSpanElement | null>(null);
+  const underline2Ref = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const animateUnderline = (el: HTMLSpanElement | null) => {
+      if (!el) return;
+
+      // Grow height
+      el.classList.remove("h-[3px]");
+      el.classList.add("h-[10px]");
+
+      // Shrink it back after a short delay
+      setTimeout(() => {
+        el.classList.remove("h-[10px]");
+        el.classList.add("h-[3px]");
+      }, 2500); // Allow half the interval to animate
+
+      // Toggle gradient colors
+      const toggleGradient = () => {
+        el.classList.toggle("from-amber-500");
+        el.classList.toggle("via-amber-600");
+        el.classList.toggle("to-amber-700");
+
+        el.classList.toggle("from-purple-600");
+        el.classList.toggle("via-purple-700");
+        el.classList.toggle("to-purple-500");
+
+        el.classList.toggle("dark:from-amber-300");
+        el.classList.toggle("dark:via-amber-400");
+        el.classList.toggle("dark:to-amber-500");
+
+        el.classList.toggle("dark:from-purple-300");
+        el.classList.toggle("dark:via-purple-400");
+        el.classList.toggle("dark:to-purple-500");
+      };
+
+      toggleGradient();
+    };
+
+    const interval = setInterval(() => {
+      animateUnderline(underline1Ref.current);
+      animateUnderline(underline2Ref.current);
+    }, 9000); // Every 9 seconds
+
+    // Initial animation on mount
+    animateUnderline(underline1Ref.current);
+    animateUnderline(underline2Ref.current);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="container mx-auto my-12 flex flex-col items-center justify-between py-20 md:flex-row">
-      {/* First Column */}
-      <div className="mb-8 flex max-w-md flex-col items-start gap-4 md:mb-0 md:mr-8 lg:max-w-xl">
-        {/* Button */}
-        <button className="mb-4 flex cursor-text items-center rounded-full bg-gray-100 px-4 py-3 text-sm dark:text-customDarkBg">
-          Elevate your brand
-          <span className="ml-2 text-primary">
-            <BiRocket />
+    <section className="container mx-auto mt-10 flex flex-col items-center justify-center py-20 md:flex-row">
+      <div className="mb-8 flex max-w-xl flex-col items-center gap-4 md:mb-0 md:max-w-4xl">
+        <h1 className="mb-2 mt-12 text-center text-5xl font-black tracking-tight md:text-5xl xl:text-6xl">
+          <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 bg-clip-text uppercase text-transparent">
+            When
+          </span>{" "}
+          <span className="relative text-primary underline-offset-4">
+            Only the Best Will Do
+            <span
+              ref={underline1Ref}
+              className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 transition-all duration-[5000ms] ease-in-out dark:from-amber-300 dark:via-amber-400 dark:to-amber-500"
+            ></span>
           </span>
-        </button>
-        {/* Heading */}
-        <h1
-          className="mb-4 text-3xl font-extrabold md:text-left md:text-4xl xl:text-5xl"
-          style={{ lineHeight: "1.4" }}
-        >
-          Igniting <span className="text-primary underline">Ideas</span> <br />
-          Inspiring <span className="text-primary underline">Innovation</span>
+          <br />
+          <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 bg-clip-text uppercase text-transparent">
+            We’re Who
+          </span>{" "}
+          <span className="relative text-primary underline-offset-4">
+            You Call
+            <span
+              ref={underline2Ref}
+              className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 transition-all duration-[5000ms] ease-in-out dark:from-amber-300 dark:via-amber-400 dark:to-amber-500"
+            ></span>
+          </span>
         </h1>
-        {/* Paragraph */}
-        <p className="mb-6 text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-left md:text-xl">
-          PrimeReserved—Your Ultimate Destination for Outstanding Website
-          Designs and Seamless Application Developments. Your satisfaction is
-          our prime reserve!
+
+        <p className="mb-6 text-center text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-xl lg:max-w-2xl">
+          From startups to elite brands — for brands that don’t settle — we
+          build top-tier websites that demand attention, turning ambitious ideas
+          into unforgettable digital icons, one website at a time.
         </p>
-        {/* Contact Button */}
-        <React.Suspense fallback={<div>Loading...</div>}>
-          <DynamicScrollToContactButton />
-        </React.Suspense>
-      </div>
-      {/* Second Column */}
-      <div className="flex justify-center md:justify-end">
-        <Image
-          src="/images/homepage-images/creation.svg"
-          alt="Hero Image"
-          width={500}
-          height={300}
-          className="rounded-lg"
-        />
+        <IconButton text="Start Your Project" icon={<BtnArrowIcon />} />
       </div>
     </section>
   );
