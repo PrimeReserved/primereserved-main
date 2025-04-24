@@ -39,7 +39,7 @@ const ContactForm = () => {
                   <div>
                     <p className="mb-1 text-lg font-bold">E-mail:</p>
                     <p className="mb-2 text-xs sm:text-sm md:text-lg">
-                      primereserveteam@gmail.com
+                      hello@primereserved.com
                     </p>
                   </div>
                 </div>

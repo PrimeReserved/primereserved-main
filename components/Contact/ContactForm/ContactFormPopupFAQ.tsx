@@ -66,7 +66,7 @@ const ContactFormPopupFAQ: React.FC<{ onClose: () => void }> = ({
             </div>
             <div>
               <p className="text-md mb-1 font-bold">E-mail:</p>
-              <p className="text-sm">primereserveteam@gmail.com</p>
+              <p className="text-sm">hello@primereserved.com</p>
             </div>
           </div>
         </div>
