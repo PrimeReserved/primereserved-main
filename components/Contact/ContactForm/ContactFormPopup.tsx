@@ -154,7 +154,8 @@ const ContactFormPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     required
                   >
                     <option value="">Select Your Service</option>
-                    <option value="Web Design">Web Design</option>
+                    <option value="UIUX Design">UI/UX Design</option>
+
                     <option value="Web Development">Web Development</option>
                     <option value="Team Training">Team Training</option>
                     <option value="Web Content Strategy">

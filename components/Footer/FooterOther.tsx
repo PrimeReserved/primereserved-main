@@ -167,7 +167,7 @@ const Services = () => (
           href="/services#webDesign"
           className="dark:text-white-dark mb-4 inline-block text-base font-light text-white duration-300 hover:text-primary dark:hover:text-primary"
         >
-          Web Design
+          UI/UX Design
         </Link>
       </li>
       <li>

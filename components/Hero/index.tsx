@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
     <section className="container mx-auto mt-10 flex flex-col items-center justify-center py-20 md:flex-row">
       <div className="mb-8 flex max-w-xl flex-col items-center gap-4 md:mb-0 md:max-w-4xl">
         <h1 className="mb-2 mt-12 text-center text-5xl font-black tracking-tight md:text-5xl xl:text-6xl">
-          <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-500 bg-clip-text uppercase text-transparent">
+          <span className="bg-gradient-to-r from-[#7d7bff] via-primary to-[#908eff] bg-clip-text uppercase text-transparent">
             When
           </span>{" "}
           <span className="relative text-primary underline-offset-4">
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             ></span>
           </span>
           <br />
-          <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-500 bg-clip-text uppercase text-transparent">
+          <span className="bg-gradient-to-r from-[#7d7bff] via-primary to-[#908eff] bg-clip-text uppercase text-transparent">
             We’re Who
           </span>{" "}
           <span className="relative text-primary underline-offset-4">
@@ -82,10 +82,10 @@ const Hero: React.FC = () => {
           </span>
         </h1>
 
-        <p className="mb-6 text-center text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-xl lg:max-w-2xl">
-          From startups to elite brands — for brands that don’t settle — we
-          build top-tier websites that demand attention, turning ambitious ideas
-          into unforgettable digital icons, one website at a time.
+        <p className="mb-6 text-center text-lg leading-relaxed text-customTextColor dark:text-white md:text-xl lg:max-w-2xl">
+          From startups to elite brands — for companies who want the best — we
+          build top-tier websites that demand attention and drive exceptional
+          conversions.
         </p>
         <IconButton text="Start Your Project" icon={<BtnArrowIcon />} />
       </div>

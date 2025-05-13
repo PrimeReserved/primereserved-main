@@ -69,9 +69,9 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
 
 const servicesData: ServiceBoxProps[] = [
   {
-    title: "Web Design",
+    title: "UI/UX Design",
     description:
-      "Tailored website solutions crafted to meet unique business requirements. Creative design that aligns with brand identity and enhances user experience.",
+      "Tailored UI/UX solutions crafted to meet user needs and unique business goals. Creative designs that align with brand identity and enhance the user experience.",
     isFirst: true,
   },
   {

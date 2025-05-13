@@ -64,7 +64,7 @@ const boxesData = [
 const ServicesPage = () => {
   return (
     <>
-      <div className="relative z-10 overflow-hidden pt-20 lg:pt-[90px]"></div>
+      <div className="relative z-10 mt-[-0.4rem] overflow-hidden pt-20 lg:pt-[90px]"></div>
       <ServicesHero />
       <section className="lg:px-20">
         <ImageTextButton
@@ -92,7 +92,7 @@ growth and enhancing customer engagement."
           <div id="webDesign">
             <ImageAndTextReverse
               imageUrl="/images/services-images/web-design.png"
-              header="Web Design"
+              header="UI/UX Design"
               paragraph="Elevate your online presence with captivating 
           and user-friendly designs. Our experts craft 
           visually appealing interfaces that reinforce 
@@ -105,7 +105,6 @@ growth and enhancing customer engagement."
           business goals."
             />
           </div>
-    
 
           <div id="teamTraining">
             <ImageAndText

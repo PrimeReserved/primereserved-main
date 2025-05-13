@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const TeamHero: React.FC = () => {
   return (
-    <section className="flex w-full flex-col items-center justify-between bg-customBg px-[3rem] py-12 dark:bg-customDarkBg md:flex-row md:px-[6rem]">
+    <section className="mt-[-0.4rem] flex w-full flex-col items-center justify-between bg-customBg px-[3rem] py-12 dark:bg-customDarkBg md:flex-row md:px-[6rem]">
       {/* First Column */}
       <div className="mb-8 flex max-w-md flex-col items-center justify-center gap-4 md:mb-0 md:mr-8 md:items-start md:justify-between lg:max-w-xl">
         <h1 className="text-center text-2xl font-semibold text-primary md:text-left md:text-4xl xl:text-5xl">
@@ -12,7 +12,7 @@ const TeamHero: React.FC = () => {
         </h1>
         {/* Paragraph */}
         <p className="mb-6 text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-left md:text-xl">
-          <span className="text-blue-900 dark:text-blue-300">
+          <span className="text-primary dark:text-[#908efc]">
             Every website we build is designed with one goal in mind—your users.
           </span>{" "}
           Behind the scenes, our team of designers, developers, and strategists
@@ -20,7 +20,7 @@ const TeamHero: React.FC = () => {
           that exceptionally drive real results. A website that blends strategy
           and design can transform your business. But without the right
           approach, you risk missing out on growth. Let’s fix that—
-          <span className="text-blue-900 dark:text-blue-300">
+          <span className="text-primary dark:text-[#908efc]">
             <Link href="/team#contactUs">
               <span className="text-amber-600 dark:text-amber-400">
                 contact us
