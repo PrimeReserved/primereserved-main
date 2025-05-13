@@ -12,9 +12,22 @@ const TeamHero: React.FC = () => {
         </h1>
         {/* Paragraph */}
         <p className="mb-6 text-lg leading-relaxed text-customTextColor dark:text-customDarkTextColor md:text-left md:text-xl">
-          <span className="text-purple-900 dark:text-purple-300">Every website we build is designed with one goal in mind—you.</span> Behind the scenes, our team of designers, developers, and strategists work to bring your vision to life. We create high-performing websites that not only look excellent but drive real results.
-A website that blends strategy and design can transform your business. But without the right approach, you risk missing out on growth. Let’s fix that—<span className="text-purple-900 dark:text-purple-300"><Link
-          href="/team#contactUs"><span className="text-amber-600 dark:text-amber-400">contact us</span></Link> and book a free strategy call today.</span>
+          <span className="text-blue-900 dark:text-blue-300">
+            Every website we build is designed with one goal in mind—your users.
+          </span>{" "}
+          Behind the scenes, our team of designers, developers, and strategists
+          work to bring your vision to life. We create high-performing websites
+          that exceptionally drive real results. A website that blends strategy
+          and design can transform your business. But without the right
+          approach, you risk missing out on growth. Let’s fix that—
+          <span className="text-blue-900 dark:text-blue-300">
+            <Link href="/team#contactUs">
+              <span className="text-amber-600 dark:text-amber-400">
+                contact us
+              </span>
+            </Link>{" "}
+            and book a free strategy call today.
+          </span>
         </p>
       </div>
       {/* Second Column */}

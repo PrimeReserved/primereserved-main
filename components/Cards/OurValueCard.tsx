@@ -15,9 +15,9 @@ const OurValueCard: React.FC<OurValueCardProps> = ({
   ourPurposeParagraph,
 }) => {
   return (
-    <div className="container mx-auto my-8 rounded-2xl bg-customSecondary py-2 dark:bg-[#1e232e]">
+    <div className="dark:bg-darker container mx-auto my-8 rounded-2xl bg-customSecondary py-2">
       <div className="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-8">
-        <div className="bg-customSecondary p-10 dark:bg-[#1e232e]">
+        <div className="dark:bg-darker bg-customSecondary p-10">
           <h2 className="mb-2 pt-2 text-xl font-bold text-white md:pt-8">
             {ourValueHeading}
           </h2>
@@ -25,7 +25,7 @@ const OurValueCard: React.FC<OurValueCardProps> = ({
             {ourValueParagraph}
           </p>
         </div>
-        <div className="relative bg-customSecondary dark:bg-[#1e232e]">
+        <div className="relative bg-customSecondary dark:bg-[#0d0c1a]">
           <div className="absolute bottom-0 left-0 top-0 hidden w-1 bg-white md:block"></div>
           <div className="absolute left-0 top-0 h-1 w-full bg-white md:hidden"></div>
           <div className="p-10 md:pl-8">

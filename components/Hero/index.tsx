@@ -27,17 +27,17 @@ const Hero: React.FC = () => {
         el.classList.toggle("via-amber-600");
         el.classList.toggle("to-amber-700");
 
-        el.classList.toggle("from-purple-600");
-        el.classList.toggle("via-purple-700");
-        el.classList.toggle("to-purple-500");
+        el.classList.toggle("from-blue-600");
+        el.classList.toggle("via-blue-700");
+        el.classList.toggle("to-blue-500");
 
         el.classList.toggle("dark:from-amber-300");
         el.classList.toggle("dark:via-amber-400");
         el.classList.toggle("dark:to-amber-500");
 
-        el.classList.toggle("dark:from-purple-300");
-        el.classList.toggle("dark:via-purple-400");
-        el.classList.toggle("dark:to-purple-500");
+        el.classList.toggle("dark:from-blue-300");
+        el.classList.toggle("dark:via-blue-400");
+        el.classList.toggle("dark:to-blue-500");
       };
 
       toggleGradient();
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
     <section className="container mx-auto mt-10 flex flex-col items-center justify-center py-20 md:flex-row">
       <div className="mb-8 flex max-w-xl flex-col items-center gap-4 md:mb-0 md:max-w-4xl">
         <h1 className="mb-2 mt-12 text-center text-5xl font-black tracking-tight md:text-5xl xl:text-6xl">
-          <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 bg-clip-text uppercase text-transparent">
+          <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-500 bg-clip-text uppercase text-transparent">
             When
           </span>{" "}
           <span className="relative text-primary underline-offset-4">
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             ></span>
           </span>
           <br />
-          <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-500 bg-clip-text uppercase text-transparent">
+          <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-500 bg-clip-text uppercase text-transparent">
             We’re Who
           </span>{" "}
           <span className="relative text-primary underline-offset-4">

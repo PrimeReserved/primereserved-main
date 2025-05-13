@@ -13,17 +13,17 @@ const FooterHome = () => {
             <div className="mb-12 max-w-[95%] md:max-w-[85%] lg:mb-16">
               <Link href="/" className="mb-8 inline-block">
                 <Image
-                  src="/images/logo/primereservedlogo.png"
+                  src="/images/logo/primereservedlogo_main.png"
                   alt="logo"
                   className="w-full dark:hidden"
-                  width={140}
+                  width={100}
                   height={30}
                 />
                 <Image
-                  src="/images/logo/primereservedlogo.png"
+                  src="/images/logo/primereservedlogo_main.png"
                   alt="logo"
                   className="hidden w-full dark:block"
-                  width={140}
+                  width={100}
                   height={30}
                 />
               </Link>
@@ -194,8 +194,7 @@ const Services = () => (
 const Copyright = () => (
   <div className="items-center justify-between py-8 font-light md:flex">
     <p className="text-center text-base text-white dark:text-white">
-    Copyright © {new Date().getFullYear()} PrimeReserved. All rights reserved
-
+      Copyright © {new Date().getFullYear()} PrimeReserved. All rights reserved
     </p>
     <div className="flex items-center justify-center gap-8">
       <Link href="/terms" className="text-base text-white dark:text-white">

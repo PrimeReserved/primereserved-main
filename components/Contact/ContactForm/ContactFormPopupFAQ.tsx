@@ -39,7 +39,7 @@ const ContactFormPopupFAQ: React.FC<{ onClose: () => void }> = ({
 
   return (
     <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center backdrop-blur-md">
-      <div className="h-screen w-11/12 max-w-lg overflow-auto rounded-lg bg-white p-8 text-black shadow-lg dark:bg-[#1e232e] dark:text-white">
+      <div className="dark:bg-darker h-screen w-11/12 max-w-lg overflow-auto rounded-lg bg-white p-8 text-black shadow-lg dark:text-white">
         <button
           className="absolute right-4 top-4 rounded-full bg-gray-100 p-4 text-lg text-gray-800 focus:outline-none"
           onClick={onClose}

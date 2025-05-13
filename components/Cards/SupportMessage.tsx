@@ -11,7 +11,7 @@ interface SupportMessageProps {
 const SupportMessage: React.FC<SupportMessageProps> = ({
   heading = "Can't find your answer?",
   message = "Please feel free to",
-  contactText = "contact us"
+  contactText = "contact us",
 }) => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -26,49 +26,51 @@ const SupportMessage: React.FC<SupportMessageProps> = ({
   // Add event listener for escape key to close popup
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (showPopup && event.key === 'Escape') {
+      if (showPopup && event.key === "Escape") {
         handleClosePopup();
       }
     };
 
-    document.addEventListener('keydown', handleEscapeKey);
-    
+    document.addEventListener("keydown", handleEscapeKey);
+
     // Prevent body scrolling when popup is open
     if (showPopup) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
-      document.body.style.overflow = 'auto';
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "auto";
     };
   }, [showPopup]);
 
   return (
     <>
-      <div className="w-full mx-auto p-6 rounded-lg shadow-lg bg-white">
-        <h2 className="text-lg md:text-xl font-medium text-gray-800">{heading}</h2>
-        <p className="text-gray-400 text-sm md:text-md">
+      <div className="mx-auto w-full rounded-lg bg-white p-6 shadow-lg">
+        <h2 className="text-lg font-medium text-gray-800 md:text-xl">
+          {heading}
+        </h2>
+        <p className="md:text-md text-sm text-gray-400">
           {message}{" "}
-          <button 
+          <button
             onClick={handleOpenPopup}
-            className="text-purple-500 hover:text-purple-600 transition-colors border-none bg-transparent p-0 font-inherit cursor-pointer"
+            className="font-inherit cursor-pointer border-none bg-transparent p-0 text-blue-500 transition-colors hover:text-blue-600"
             aria-label="Open contact form"
           >
             {contactText}
-          </button>
-          {" "}and we will get back to you shortly.
+          </button>{" "}
+          and we will get back to you shortly.
         </p>
       </div>
 
       {showPopup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div className="relative w-full max-w-2xl mx-4">
-            <button 
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="relative mx-4 w-full max-w-2xl">
+            <button
               onClick={handleClosePopup}
-              className="absolute -top-12 right-0 text-white hover:text-gray-200 text-xl font-bold p-2"
+              className="absolute -top-12 right-0 p-2 text-xl font-bold text-white hover:text-gray-200"
               aria-label="Close popup"
             >
               ✕
