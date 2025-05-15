@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
             </h1>
           </div>
           <div className="col-span-1">
-            <div className="flex xs:flex-col lg:flex-row">
+            <div className="flex gap-x-2 xs:flex-col lg:flex-row">
               <div className="flex-1">
                 <div>
                   <div className="mb-4 flex w-fit flex-col items-center justify-center rounded-full bg-gray-200 p-2">
