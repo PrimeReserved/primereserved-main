@@ -38,10 +38,10 @@ const testimonials = [
   },
   {
     quote:
-      "PrimeReserved delivered exactly what we needed and more. Their professionalism, expertise, and commitment to customer satisfaction are commendable. We are extremely satisfied with the outcome of our project and would gladly recommend their services to others.",
-    image: "/images/testimonials/user.png",
-    name: "Mr John",
-    position: "IT Specialist",
+      "Enovate Resources sincerely appreciates your professionalism and timely delivery on this project. It was a pleasure working with you, and we look forward to future collaborations.",
+    image: "/images/testimonials/userEnovate.png",
+    name: "Enovate Resources",
+    position: "IT Company",
     location: "Nigeria",
   },
   {

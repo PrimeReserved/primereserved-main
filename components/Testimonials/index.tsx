@@ -21,6 +21,15 @@ const testimonialData: Testimonial[] = [
     image: "/images/testimonials/liberty.jpeg",
     star: 5,
   },
+  {
+    id: 3,
+    name: "Enovate Resources",
+    designation: "Enovate Resources Ltd, Nigeria",
+    content:
+      "Enovate Resources sincerely appreciates your professionalism and timely delivery on this project. It was a pleasure working with you, and we look forward to future collaborations.",
+    image: "/images/testimonials/userEnovate.png",
+    star: 5,
+  },
 ];
 
 const Testimonials = () => {

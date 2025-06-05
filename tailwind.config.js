@@ -55,7 +55,7 @@ module.exports = {
         customDarkTextColor: "#ccc",
         // customDarkBg: "#121723",
         customDarkBg: "#1B1834",
-        customBg: "#F9ECFF",
+        customBg: "#ECF4FF",
         customError: "#B3261E",
         customSuccess: "#21B31E",
         "body-color": "#788293",

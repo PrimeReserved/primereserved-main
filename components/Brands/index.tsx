@@ -29,6 +29,13 @@ const Brands = () => {
           height={40}
           style={{ padding: "0 4px" }}
         />
+        <Image
+          src="/images/brands/userEnovate.png"
+          alt="Brand 4"
+          width={50}
+          height={40}
+          style={{ padding: "0 4px" }}
+        />
       </div>
     </section>
   );
