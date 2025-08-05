@@ -11,6 +11,7 @@ import ImageCardOne from "@/components/Cards/ImageCardOne";
 import ImageCardTwo from "@/components/Cards/ImageCardTwo";
 import ImageBannerTwo from "@/components/Common/ImageBannerTwo";
 import ImageBanner from "@/components/Common/ImageBanner";
+import PromoSection from "@/components/PromoSection/PromoSection";
 
 export const metadata: Metadata = {
   title:
@@ -64,6 +65,7 @@ export default function Home() {
       <ImageCardOne />
       <ClientReviews testimonials={testimonials} />
       <Brands />
+      <PromoSection />
       <ImageCardTwo />
       <ImageBannerTwo />
       <FAQs />

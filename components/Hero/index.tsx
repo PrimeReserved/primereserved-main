@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import IconButton from "../Buttons/IconButton";
 import BtnArrowIcon from "../Buttons/BtnArrowIcon";
+import HeroVideoButton from "../VideoButton/HeroVideoButton";
 
 const Hero: React.FC = () => {
   const underline1Ref = useRef<HTMLSpanElement | null>(null);
@@ -71,7 +72,7 @@ const Hero: React.FC = () => {
           </span>
           <br />
           <span className="bg-gradient-to-r from-[#7d7bff] via-primary to-[#908eff] bg-clip-text uppercase text-transparent">
-            We’re Who
+            We're Who
           </span>{" "}
           <span className="relative text-primary underline-offset-4">
             You Call
@@ -87,7 +88,11 @@ const Hero: React.FC = () => {
           build top-tier websites that demand attention and drive exceptional
           conversions.
         </p>
-        <IconButton text="Start Your Project" icon={<BtnArrowIcon />} />
+
+        <div className="flex flex-row items-center justify-center gap-4">
+          <IconButton text="Start Your Project" icon={<BtnArrowIcon />} />
+          <HeroVideoButton />
+        </div>
       </div>
     </section>
   );

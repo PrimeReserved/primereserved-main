@@ -7,6 +7,7 @@ import ImageTextButton from "@/components/Cards/ImageTextButton";
 import WhyPrimeReserved from "@/components/Cards/WhyPrimeReserved";
 import ContactForm from "@/components/Contact/FormHandling/ContactForm";
 import FAQFullScreen from "@/components/FAQs/FAQFullScreen";
+import PromoSection from "@/components/PromoSection/PromoSection";
 import ServicesHero from "@/components/Services/ServicesHero";
 import { Metadata } from "next";
 
@@ -132,6 +133,7 @@ growth and enhancing customer engagement."
           <DesignFlow boxesData={boxesData} />
         </div>
       </section>
+      <PromoSection />
       <CallScheduler />
       <div className="pt-16">
         <CenteredHeading text="Why PrimeReserved" />
